@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894571EBCD185006DE56D /* AppDelegate.swift */; };
-		E808945A1EBCD185006DE56D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894591EBCD185006DE56D /* ViewController.swift */; };
 		E808945D1EBCD185006DE56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E808945B1EBCD185006DE56D /* Main.storyboard */; };
 		E808945F1EBCD185006DE56D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E808945E1EBCD185006DE56D /* Assets.xcassets */; };
 		E80894621EBCD185006DE56D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80894601EBCD185006DE56D /* LaunchScreen.storyboard */; };
@@ -21,6 +20,8 @@
 		E80894911EBCD542006DE56D /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E80894881EBCD4E4006DE56D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E80894931EBCD558006DE56D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E808948E1EBCD51F006DE56D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E80894941EBCD558006DE56D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E808948C1EBCD510006DE56D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */; };
+		E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808949F1EBCE0F9006DE56D /* TagTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,6 @@
 /* Begin PBXFileReference section */
 		E80894541EBCD185006DE56D /* MusicForThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicForThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80894571EBCD185006DE56D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E80894591EBCD185006DE56D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E808945C1EBCD185006DE56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E808945E1EBCD185006DE56D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80894611EBCD185006DE56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,10 +78,12 @@
 		E80894731EBCD185006DE56D /* MusicForThoughtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicForThoughtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80894771EBCD185006DE56D /* MusicForThoughtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicForThoughtUITests.swift; sourceTree = "<group>"; };
 		E80894791EBCD185006DE56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E80894851EBCD19B006DE56D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E80894851EBCD19B006DE56D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		E80894881EBCD4E4006DE56D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E808948C1EBCD510006DE56D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		E808948E1EBCD51F006DE56D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagTVC.swift; sourceTree = "<group>"; };
+		E808949F1EBCE0F9006DE56D /* TagTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 				E808946B1EBCD185006DE56D /* MusicForThoughtTests */,
 				E80894761EBCD185006DE56D /* MusicForThoughtUITests */,
 				E80894551EBCD185006DE56D /* Products */,
-				E80894851EBCD19B006DE56D /* .gitignore */,
+				E80894951EBCDF70006DE56D /* Supporting Files */,
 				E80894871EBCD4E4006DE56D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -137,12 +139,11 @@
 		E80894561EBCD185006DE56D /* MusicForThought */ = {
 			isa = PBXGroup;
 			children = (
-				E80894571EBCD185006DE56D /* AppDelegate.swift */,
-				E80894591EBCD185006DE56D /* ViewController.swift */,
-				E808945B1EBCD185006DE56D /* Main.storyboard */,
-				E808945E1EBCD185006DE56D /* Assets.xcassets */,
-				E80894601EBCD185006DE56D /* LaunchScreen.storyboard */,
-				E80894631EBCD185006DE56D /* Info.plist */,
+				E808949A1EBCDFD8006DE56D /* APIS */,
+				E80894991EBCDFD0006DE56D /* Adapters */,
+				E80894981EBCDFBD006DE56D /* ViewModels */,
+				E80894971EBCDF91006DE56D /* Storyboards */,
+				E80894961EBCDF81006DE56D /* ViewControllers */,
 			);
 			path = MusicForThought;
 			sourceTree = "<group>";
@@ -173,6 +174,57 @@
 				E80894881EBCD4E4006DE56D /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E80894951EBCDF70006DE56D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E80894851EBCD19B006DE56D /* .gitignore */,
+				E80894571EBCD185006DE56D /* AppDelegate.swift */,
+				E808945E1EBCD185006DE56D /* Assets.xcassets */,
+				E80894631EBCD185006DE56D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = MusicForThought;
+			sourceTree = "<group>";
+		};
+		E80894961EBCDF81006DE56D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E808949F1EBCE0F9006DE56D /* TagTVC.swift */,
+				E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E80894971EBCDF91006DE56D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E80894601EBCD185006DE56D /* LaunchScreen.storyboard */,
+				E808945B1EBCD185006DE56D /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E80894981EBCDFBD006DE56D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		E80894991EBCDFD0006DE56D /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		E808949A1EBCDFD8006DE56D /* APIS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = APIS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E808945A1EBCD185006DE56D /* ViewController.swift in Sources */,
+				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
+				E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */,
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
