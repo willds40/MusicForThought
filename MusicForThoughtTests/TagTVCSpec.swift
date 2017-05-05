@@ -14,7 +14,7 @@ class TagTVCSpec: QuickSpec{
             it(" should be loaded and not be nil"){
                 expect(tagTVC.view).toNot(beNil())
             }
-            describe("number of sections"){
+                describe("number of sections"){
                 it ("should be equal to 1"){
                     expect(tagTVC.numberOfSections(in: tagTVC.view as! UITableView)).to(equal(1))
                 }

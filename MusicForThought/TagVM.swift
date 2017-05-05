@@ -3,5 +3,10 @@ import UIKit
 import Foundation
 
 class TagVM{
-let tags = ["Artist", "Album", "Genre"]
+var tags: [String] = Categories().categories
+}
+
+class Categories{
+  var categories = ["Artist", "Album", "Genre"]
+    
 }
