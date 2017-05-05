@@ -14,8 +14,24 @@ class TagTVCSpec: QuickSpec{
             it(" should be loaded and not be nil"){
                 expect(tagTVC.view).toNot(beNil())
             }
+            describe("number of sections"){
+                it ("should be equal to 1"){
+                    expect(tagTVC.numberOfSections(in: tagTVC.view as! UITableView)).to(equal(1))
+                }
+            }
+            describe("number of rows in the section"){
+                context("when there is one section"){
+                    it("should equal the count of the tags array in tags vm"){
+                        let tagVM = TagVM()
+                        expect(tagTVC.tableView(tagTVC.view as! UITableView, numberOfRowsInSection: 1)).to(equal(tagVM.tags.count))
+                    }
+                }
+            }
+            describe("title of tbv"){
+                it("should be 'Find Music By'"){
+                    expect(tagTVC.title).to(equal("FIND MUSIC BY"))
+                }
+            }
         }
-   
     }
 }
-
