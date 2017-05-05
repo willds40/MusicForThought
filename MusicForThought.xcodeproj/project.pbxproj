@@ -11,7 +11,6 @@
 		E808945D1EBCD185006DE56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E808945B1EBCD185006DE56D /* Main.storyboard */; };
 		E808945F1EBCD185006DE56D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E808945E1EBCD185006DE56D /* Assets.xcassets */; };
 		E80894621EBCD185006DE56D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80894601EBCD185006DE56D /* LaunchScreen.storyboard */; };
-		E808946D1EBCD185006DE56D /* MusicForThoughtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808946C1EBCD185006DE56D /* MusicForThoughtTests.swift */; };
 		E80894781EBCD185006DE56D /* MusicForThoughtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894771EBCD185006DE56D /* MusicForThoughtUITests.swift */; };
 		E80894861EBCD19B006DE56D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E80894851EBCD19B006DE56D /* .gitignore */; };
 		E80894891EBCD4E4006DE56D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80894881EBCD4E4006DE56D /* Alamofire.framework */; };
@@ -22,6 +21,9 @@
 		E80894941EBCD558006DE56D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E808948C1EBCD510006DE56D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */; };
 		E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808949F1EBCE0F9006DE56D /* TagTVC.swift */; };
+		E80894A61EBD017F006DE56D /* TagSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894A51EBD017F006DE56D /* TagSpec.swift */; };
+		E80894A81EBD01D3006DE56D /* TagVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894A71EBD01D3006DE56D /* TagVM.swift */; };
+		E80894AA1EBD049F006DE56D /* TagTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894A91EBD049F006DE56D /* TagTVCSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +75,7 @@
 		E80894611EBCD185006DE56D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E80894631EBCD185006DE56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E80894681EBCD185006DE56D /* MusicForThoughtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicForThoughtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E808946C1EBCD185006DE56D /* MusicForThoughtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicForThoughtTests.swift; sourceTree = "<group>"; };
-		E808946E1EBCD185006DE56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E808946E1EBCD185006DE56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MusicForThoughtTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		E80894731EBCD185006DE56D /* MusicForThoughtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicForThoughtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80894771EBCD185006DE56D /* MusicForThoughtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicForThoughtUITests.swift; sourceTree = "<group>"; };
 		E80894791EBCD185006DE56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +85,9 @@
 		E808948E1EBCD51F006DE56D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagTVC.swift; sourceTree = "<group>"; };
 		E808949F1EBCE0F9006DE56D /* TagTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTVC.swift; sourceTree = "<group>"; };
+		E80894A51EBD017F006DE56D /* TagSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSpec.swift; sourceTree = "<group>"; };
+		E80894A71EBD01D3006DE56D /* TagVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagVM.swift; sourceTree = "<group>"; };
+		E80894A91EBD049F006DE56D /* TagTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTVCSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +155,8 @@
 		E808946B1EBCD185006DE56D /* MusicForThoughtTests */ = {
 			isa = PBXGroup;
 			children = (
-				E808946C1EBCD185006DE56D /* MusicForThoughtTests.swift */,
-				E808946E1EBCD185006DE56D /* Info.plist */,
+				E80894A21EBD012F006DE56D /* ViewModel */,
+				E80894A11EBD011C006DE56D /* VIewControllers */,
 			);
 			path = MusicForThoughtTests;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 		E80894951EBCDF70006DE56D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E808946E1EBCD185006DE56D /* Info.plist */,
 				E80894851EBCD19B006DE56D /* .gitignore */,
 				E80894571EBCD185006DE56D /* AppDelegate.swift */,
 				E808945E1EBCD185006DE56D /* Assets.xcassets */,
@@ -209,6 +214,7 @@
 		E80894981EBCDFBD006DE56D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E80894A71EBD01D3006DE56D /* TagVM.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -225,6 +231,22 @@
 			children = (
 			);
 			name = APIS;
+			sourceTree = "<group>";
+		};
+		E80894A11EBD011C006DE56D /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E80894A91EBD049F006DE56D /* TagTVCSpec.swift */,
+			);
+			name = VIewControllers;
+			sourceTree = "<group>";
+		};
+		E80894A21EBD012F006DE56D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E80894A51EBD017F006DE56D /* TagSpec.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
+				E80894A81EBD01D3006DE56D /* TagVM.swift in Sources */,
 				E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */,
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
 			);
@@ -377,7 +400,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E808946D1EBCD185006DE56D /* MusicForThoughtTests.swift in Sources */,
+				E80894A61EBD017F006DE56D /* TagSpec.swift in Sources */,
+				E80894AA1EBD049F006DE56D /* TagTVCSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
