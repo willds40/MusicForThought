@@ -28,6 +28,7 @@
 		E80894AE1EBD0EC3006DE56D /* SubTagVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */; };
 		E80894B01EBD129F006DE56D /* SearchAda[ter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894AF1EBD129F006DE56D /* SearchAda[ter.swift */; };
 		E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B71EC0C4CF006DE56D /* Categories.swift */; };
+		E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagVM.swift; sourceTree = "<group>"; };
 		E80894AF1EBD129F006DE56D /* SearchAda[ter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchAda[ter.swift"; sourceTree = "<group>"; };
 		E80894B71EC0C4CF006DE56D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagTVCSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				E80894A91EBD049F006DE56D /* TagTVCSpec.swift */,
+				E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */,
 			);
 			name = VIewControllers;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */,
 				E80894AC1EBD0E8B006DE56D /* SubTagSpec.swift in Sources */,
 				E80894A61EBD017F006DE56D /* TagSpec.swift in Sources */,
 				E80894AA1EBD049F006DE56D /* TagTVCSpec.swift in Sources */,
