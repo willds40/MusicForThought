@@ -224,8 +224,8 @@
 		E80894981EBCDFBD006DE56D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E80894A71EBD01D3006DE56D /* TagVM.swift */,
 				E80894B71EC0C4CF006DE56D /* Categories.swift */,
+				E80894A71EBD01D3006DE56D /* TagVM.swift */,
 				E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */,
 			);
 			name = ViewModels;

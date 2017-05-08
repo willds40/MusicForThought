@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Rhi-he-iTV" kind="show" identifier="SubTagSegue" id="gaH-0I-HXK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
