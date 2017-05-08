@@ -9,20 +9,18 @@
 import UIKit
 
 class SubTagTVC: UITableViewController {
-//    var subTagVM:SubTagVM?
+    var subTagVM:SubTagVM?
     var searchTerm = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        subTagVM = SubTagVM()
         _ = setSearchTerm(searchTerm: (searchTerm))
         }
     
     func setSearchTerm(searchTerm:String)->String{
-        let subTagVM = SubTagVM()
-        subTagVM.searchTerm = searchTerm
-        return searchTerm
+        subTagVM?.searchTerm = searchTerm
+        return ""
     }
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
