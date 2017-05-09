@@ -22,11 +22,6 @@ class SubTagTVCSpec: QuickSpec{
                     }
                 }
             }
-            describe("section header"){
-               it("it should read 'Choose A Genre'"){
-                expect(subTagTVC.tableView(subTagTVC.view as! UITableView, titleForHeaderInSection: 1)).to(equal("Choose A Genre"))
-                }
-            }
         }
     }
 }

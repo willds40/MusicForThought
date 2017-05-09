@@ -31,7 +31,6 @@ class TagTVC: UITableViewController {
         return (tagVM?.tags.count)!
     }
     
-    
     private struct Storyboard{
         static let TagCellIndetifier = "TagCell"
     }

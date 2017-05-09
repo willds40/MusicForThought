@@ -3,13 +3,16 @@
 import UIKit
 
 class SongCVC: UICollectionViewController {
- 
+    var songVM:SongVM?
+    var searchTerm = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-//        // Register cell classes
+        songVM = SongVM()
+        songVM?.searchTermBySong = searchTerm
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
    }
+    func mockSetSearchTermBySong(searchTerm:String)->String{return ""}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,8 +37,8 @@ class SongCVC: UICollectionViewController {
         return 10
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var borderColor: CGColor! = UIColor.black.cgColor
-        var borderWidth: CGFloat = 1
+        let borderColor: CGColor! = UIColor.black.cgColor
+        let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
         for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor

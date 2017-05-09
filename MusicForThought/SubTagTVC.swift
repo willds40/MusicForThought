@@ -11,6 +11,7 @@ import UIKit
 class SubTagTVC: UITableViewController {
     var subTagVM:SubTagVM?
     var searchTerm = ""
+    var rowTitleSelected = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         subTagVM = SubTagVM()
@@ -45,21 +46,17 @@ class SubTagTVC: UITableViewController {
         cell.textLabel?.text = subTagVM?.genres[indexPath.row]
         return cell
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         let headerText = UILabel()
-        headerText.textAlignment = .center
-        headerText.text = "Choose A Genre"
-        return headerText.text
-    }
    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "SongSegue" {
+            if let songCVC = segue.destination as? SongCVC {
+                let path = self.tableView.indexPathForSelectedRow!
+                songCVC.title = self.subTagVM?.genres[path.row]
+                songCVC.searchTerm = (self.subTagVM?.genres[path.row])!
+                rowTitleSelected = songCVC.searchTerm
+            }
+        }
+        
     }
-    */
 
-}
+   }

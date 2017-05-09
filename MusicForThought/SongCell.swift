@@ -10,4 +10,4 @@ import UIKit
 
 class SongCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
-   }
+    }

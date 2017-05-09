@@ -59,7 +59,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="PTN-ub-hDu" kind="show" identifier="SongSegue" id="zVv-o6-F5n"/>
+                                    <segue destination="PTN-ub-hDu" kind="show" identifier="SongSegue" id="1s9-Y4-SH6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="1588" y="38.23088455772114"/>
         </scene>
-        <!--SongCVC-->
+        <!--Songs-->
         <scene sceneID="TlM-Jo-P1i">
             <objects>
                 <collectionViewController id="PTN-ub-hDu" customClass="SongCVC" customModule="MusicForThought" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,23 +117,11 @@
                             <outlet property="dataSource" destination="PTN-ub-hDu" id="PZO-OM-tcO"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="fBd-xz-c5u">
-                        <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" id="aKi-MD-Hoz">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                            <connections>
-                                <outlet property="delegate" destination="PTN-ub-hDu" id="Llf-SB-duc"/>
-                            </connections>
-                        </textField>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Songs" id="fBd-xz-c5u"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0d-FG-mOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640.8000000000002" y="37.331334332833585"/>
+            <point key="canvasLocation" x="2612" y="38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K1N-tj-TTR">
