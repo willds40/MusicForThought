@@ -2,20 +2,14 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class SongCVC: UICollectionViewController {
- fileprivate let reuseIdentifier = "SongrCell"
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-    }
+//        // Register cell classes
+        self.collectionView?.delegate = self
+        self.collectionView?.dataSource = self
+   }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,13 +33,20 @@ class SongCVC: UICollectionViewController {
         // #warning Incomplete implementation, return the number of items
         return 10
     }
-
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = UIColor.black
+        var borderColor: CGColor! = UIColor.black.cgColor
+        var borderWidth: CGFloat = 1
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
+        for: indexPath) as! SongCell
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.backgroundColor = UIColor.white
+       
+        let itunesLogo = UIImage(named:"itunes.jpg")
+        cell.image.image = itunesLogo
+        cell.image.layer.borderWidth = borderWidth
+        cell.image.layer.borderColor = borderColor
         return cell
     }
-
     // MARK: UICollectionViewDelegate
 
     /*
@@ -78,3 +79,4 @@ class SongCVC: UICollectionViewController {
     */
 
 }
+

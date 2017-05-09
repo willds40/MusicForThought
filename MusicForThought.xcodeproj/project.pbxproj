@@ -31,6 +31,8 @@
 		E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */; };
 		E80894BE1EC203CD006DE56D /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894BD1EC203CD006DE56D /* Genres.swift */; };
 		E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894BF1EC220C9006DE56D /* SongCVC.swift */; };
+		E80894C61EC2353A006DE56D /* itunes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E80894C51EC2353A006DE56D /* itunes.jpg */; };
+		E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894C91EC2382C006DE56D /* SongCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagTVCSpec.swift; sourceTree = "<group>"; };
 		E80894BD1EC203CD006DE56D /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		E80894BF1EC220C9006DE56D /* SongCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCVC.swift; sourceTree = "<group>"; };
+		E80894C51EC2353A006DE56D /* itunes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = itunes.jpg; sourceTree = "<group>"; };
+		E80894C91EC2382C006DE56D /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		E80894951EBCDF70006DE56D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E80894C51EC2353A006DE56D /* itunes.jpg */,
 				E808946E1EBCD185006DE56D /* Info.plist */,
 				E80894851EBCD19B006DE56D /* .gitignore */,
 				E80894571EBCD185006DE56D /* AppDelegate.swift */,
@@ -222,6 +227,7 @@
 			children = (
 				E80894601EBCD185006DE56D /* LaunchScreen.storyboard */,
 				E808945B1EBCD185006DE56D /* Main.storyboard */,
+				E80894C91EC2382C006DE56D /* SongCell.swift */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 			files = (
 				E80894861EBCD19B006DE56D /* .gitignore in Resources */,
 				E80894621EBCD185006DE56D /* LaunchScreen.storyboard in Resources */,
+				E80894C61EC2353A006DE56D /* itunes.jpg in Resources */,
 				E808945F1EBCD185006DE56D /* Assets.xcassets in Resources */,
 				E808945D1EBCD185006DE56D /* Main.storyboard in Resources */,
 			);
@@ -418,6 +425,7 @@
 				E80894A81EBD01D3006DE56D /* TagVM.swift in Sources */,
 				E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */,
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
+				E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */,
 				E80894BE1EC203CD006DE56D /* Genres.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
