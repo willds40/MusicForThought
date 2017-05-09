@@ -1,6 +1,6 @@
 
 import Foundation
 class Genres{
-    var genres = ["Rap", "Rock", "Indie", "Classical", "Jazz", "Country"]
+    var genres = ["Search All Genres","Rap", "Rock", "Indie", "Classical", "Jazz", "Country"]
 
 }

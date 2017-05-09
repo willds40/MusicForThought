@@ -44,6 +44,7 @@ class SubTagSpec: QuickSpec{
                     expect(subTagVM.genres).to(contain("Classical"))
                     expect(subTagVM.genres).to(contain("Jazz"))
                     expect(subTagVM.genres).to(contain("Country"))
+                    expect(subTagVM.genres).to(contain("Search All Genres"))
                 }
             }
 
