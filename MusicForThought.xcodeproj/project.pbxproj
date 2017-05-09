@@ -30,6 +30,7 @@
 		E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B71EC0C4CF006DE56D /* Categories.swift */; };
 		E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */; };
 		E80894BE1EC203CD006DE56D /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894BD1EC203CD006DE56D /* Genres.swift */; };
+		E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894BF1EC220C9006DE56D /* SongCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		E80894B71EC0C4CF006DE56D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagTVCSpec.swift; sourceTree = "<group>"; };
 		E80894BD1EC203CD006DE56D /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		E80894BF1EC220C9006DE56D /* SongCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				E808949F1EBCE0F9006DE56D /* TagTVC.swift */,
 				E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */,
+				E80894BF1EC220C9006DE56D /* SongCVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			files = (
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
 				E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */,
+				E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */,
 				E80894AE1EBD0EC3006DE56D /* SubTagVM.swift in Sources */,
 				E80894B01EBD129F006DE56D /* SearchAda[ter.swift in Sources */,
 				E80894A81EBD01D3006DE56D /* TagVM.swift in Sources */,

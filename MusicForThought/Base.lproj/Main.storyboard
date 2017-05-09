@@ -57,6 +57,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PTN-ub-hDu" kind="show" identifier="SongSegue" id="zVv-o6-F5n"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,19 +67,16 @@
                             <outlet property="delegate" destination="Rhi-he-iTV" id="cJO-OX-GaW"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="PTN-ub-hDu" kind="show" id="Mad-0R-IfE"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GR-JN-Dm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1588" y="38.23088455772114"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--SongCVC-->
         <scene sceneID="TlM-Jo-P1i">
             <objects>
-                <collectionViewController id="PTN-ub-hDu" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="P8t-dA-T7I">
+                <collectionViewController id="PTN-ub-hDu" customClass="SongCVC" customModule="MusicForThought" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="P8t-dA-T7I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,6 +109,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <outlet property="delegate" destination="PTN-ub-hDu" id="Llf-SB-duc"/>
+                            </connections>
                         </textField>
                     </navigationItem>
                 </collectionViewController>
