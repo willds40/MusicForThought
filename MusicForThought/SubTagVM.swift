@@ -2,9 +2,9 @@ import Foundation
 
 class SubTagVM{
     var searchAdapter:SearchAdapter?
-    var searchTerm:String?{
+    var searchTermByGenre:String?{
         didSet{
-            searchAdapter?.searchMusicBy(searchTerm!)
+            searchAdapter?.searchMusicBy(searchTermByGenre!)
         }
     }
 }
