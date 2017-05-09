@@ -29,6 +29,7 @@
 		E80894B01EBD129F006DE56D /* SearchAda[ter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894AF1EBD129F006DE56D /* SearchAda[ter.swift */; };
 		E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B71EC0C4CF006DE56D /* Categories.swift */; };
 		E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */; };
+		E80894BE1EC203CD006DE56D /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894BD1EC203CD006DE56D /* Genres.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		E80894AF1EBD129F006DE56D /* SearchAda[ter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchAda[ter.swift"; sourceTree = "<group>"; };
 		E80894B71EC0C4CF006DE56D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTagTVCSpec.swift; sourceTree = "<group>"; };
+		E80894BD1EC203CD006DE56D /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				E80894B71EC0C4CF006DE56D /* Categories.swift */,
 				E80894A71EBD01D3006DE56D /* TagVM.swift */,
 				E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */,
+				E80894BD1EC203CD006DE56D /* Genres.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				E80894A81EBD01D3006DE56D /* TagVM.swift in Sources */,
 				E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */,
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
+				E80894BE1EC203CD006DE56D /* Genres.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

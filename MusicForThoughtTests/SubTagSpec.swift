@@ -36,8 +36,18 @@ class SubTagSpec: QuickSpec{
                     expect(result).to(equal("Genre"))
                 }
             }
+            describe("should have an array with six genre elements in in it "){
+                let subTagVM = SubTagVM()
+                    expect(subTagVM.genres).to(contain("Rap"))
+                    expect(subTagVM.genres).to(contain("Rock"))
+                    expect(subTagVM.genres).to(contain("Indie"))
+                    expect(subTagVM.genres).to(contain("Classical"))
+                    expect(subTagVM.genres).to(contain("Jazz"))
+                    expect(subTagVM.genres).to(contain("Country"))
+                }
+            }
 
         }
     }
-}
+
 
