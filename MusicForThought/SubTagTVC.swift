@@ -46,9 +46,12 @@ class SubTagTVC: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Choose A Genre"
+         let headerText = UILabel()
+        headerText.textAlignment = .center
+        headerText.text = "Choose A Genre"
+        return headerText.text
     }
-
+   
     /*
     // MARK: - Navigation
 
