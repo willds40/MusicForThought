@@ -40,6 +40,8 @@
 		E80894D41EC368A9006DE56D /* DescriptionTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */; };
 		E80894D61EC36988006DE56D /* SongCVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894D51EC36988006DE56D /* SongCVCSpec.swift */; };
 		E80894D81EC36AF0006DE56D /* DescriptionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894D71EC36AF0006DE56D /* DescriptionSpec.swift */; };
+		E80894DA1EC36DDE006DE56D /* CHMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = E80894D91EC36DDE006DE56D /* CHMusic.png */; };
+		E80894DB1EC3701F006DE56D /* CHMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = E80894D91EC36DDE006DE56D /* CHMusic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,7 @@
 		E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTVCSpec.swift; sourceTree = "<group>"; };
 		E80894D51EC36988006DE56D /* SongCVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCVCSpec.swift; sourceTree = "<group>"; };
 		E80894D71EC36AF0006DE56D /* DescriptionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionSpec.swift; sourceTree = "<group>"; };
+		E80894D91EC36DDE006DE56D /* CHMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHMusic.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,7 @@
 		E80894951EBCDF70006DE56D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E80894D91EC36DDE006DE56D /* CHMusic.png */,
 				E80894C51EC2353A006DE56D /* itunes.jpg */,
 				E808946E1EBCD185006DE56D /* Info.plist */,
 				E80894851EBCD19B006DE56D /* .gitignore */,
@@ -409,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80894DB1EC3701F006DE56D /* CHMusic.png in Resources */,
 				E80894861EBCD19B006DE56D /* .gitignore in Resources */,
 				E80894621EBCD185006DE56D /* LaunchScreen.storyboard in Resources */,
 				E80894C61EC2353A006DE56D /* itunes.jpg in Resources */,
@@ -421,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80894DA1EC36DDE006DE56D /* CHMusic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
