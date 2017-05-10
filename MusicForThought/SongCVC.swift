@@ -8,11 +8,11 @@ class SongCVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         songVM = SongVM()
-        songVM?.searchTermBySong = searchTerm
+        songVM?.searchTermByGenre = searchTerm
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
    }
-    func mockSetSearchTermBySong(searchTerm:String)->String{return ""}
+    func mockSearchTermByGenre(searchTerm:String)->String{return ""}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -6,17 +6,17 @@ class SubTagSpec: QuickSpec{
     override func spec() {
         describe("subTagVM"){
         class mockSubTagTVC:SubTagTVC{
-               override func mockSetSearchTermByGenre(searchTerm:String)->String{
+               override func mockSetSearchTermByCategory(searchTerm:String)->String{
                 let subTagVM = SubTagVM()
-                subTagVM.searchTermByGenre = searchTerm
-                return subTagVM.searchTermByGenre!
+                subTagVM.searchTermByCategory = searchTerm
+                return subTagVM.searchTermByCategory!
                 }
             }
             context("search in TVC is equal to Artist"){
             it("search term should be equal to Artist"){
             let myClassInstance = mockSubTagTVC()
             let searchTerm = "Artist"
-           let result = myClassInstance.mockSetSearchTermByGenre(searchTerm: searchTerm)
+           let result = myClassInstance.mockSetSearchTermByCategory(searchTerm: searchTerm)
             expect(result).to(equal("Artist"))
             }
         }
@@ -24,16 +24,8 @@ class SubTagSpec: QuickSpec{
                 it("search term should be equal to Album"){
                     let myClassInstance = mockSubTagTVC()
                     let searchTerm = "Album"
-                    let result = myClassInstance.mockSetSearchTermByGenre(searchTerm: searchTerm)
+                    let result = myClassInstance.mockSetSearchTermByCategory(searchTerm: searchTerm)
                     expect(result).to(equal("Album"))
-                }
-            }
-            context("search in TVC is equal to Genre"){
-                it("search term should be equal to Genre"){
-                    let myClassInstance = mockSubTagTVC()
-                    let searchTerm = "Genre"
-                    let result = myClassInstance.mockSetSearchTermByGenre(searchTerm: searchTerm)
-                    expect(result).to(equal("Genre"))
                 }
             }
             describe("should have an array with six genre elements in in it "){

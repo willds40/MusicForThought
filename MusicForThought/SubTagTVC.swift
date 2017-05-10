@@ -15,10 +15,10 @@ class SubTagTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subTagVM = SubTagVM()
-        subTagVM?.searchTermByGenre = searchTerm
+        subTagVM?.searchTermByCategory = searchTerm
         }
     
-    func mockSetSearchTermByGenre(searchTerm:String)->String{return ""}
+    func mockSetSearchTermByCategory(searchTerm:String)->String{return ""}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
