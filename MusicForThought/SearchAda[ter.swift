@@ -1,16 +1,19 @@
 
 import Foundation
 class SearchAdapter {
+    var api = API()
     func searchMusicByCategory(_ searchTerm:String){
-    //create teh url fetch string
-        
-    //make the fetch request
+    let result = api.searchReguest(endpoint: "/api/1/" + searchTerm)
     
-    // store the results
-    
-    //send the results to the model
     }
+    
+    
+    
+    
+    
+    
     func searchByGenre(_searchTerm:String){
+    
     
     }
     
