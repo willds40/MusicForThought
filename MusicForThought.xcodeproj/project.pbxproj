@@ -35,6 +35,9 @@
 		E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894C91EC2382C006DE56D /* SongCell.swift */; };
 		E80894CC1EC2619C006DE56D /* SongVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894CB1EC2619C006DE56D /* SongVM.swift */; };
 		E80894CE1EC26261006DE56D /* SongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894CD1EC26261006DE56D /* SongSpec.swift */; };
+		E80894D01EC36694006DE56D /* DescriptionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894CF1EC36694006DE56D /* DescriptionTVC.swift */; };
+		E80894D21EC36731006DE56D /* DescriptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894D11EC36731006DE56D /* DescriptionVM.swift */; };
+		E80894D41EC368A9006DE56D /* DescriptionTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		E80894C91EC2382C006DE56D /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		E80894CB1EC2619C006DE56D /* SongVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongVM.swift; sourceTree = "<group>"; };
 		E80894CD1EC26261006DE56D /* SongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongSpec.swift; sourceTree = "<group>"; };
+		E80894CF1EC36694006DE56D /* DescriptionTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTVC.swift; sourceTree = "<group>"; };
+		E80894D11EC36731006DE56D /* DescriptionVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionVM.swift; sourceTree = "<group>"; };
+		E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTVCSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,7 @@
 				E808949F1EBCE0F9006DE56D /* TagTVC.swift */,
 				E808949D1EBCE0E0006DE56D /* SubTagTVC.swift */,
 				E80894BF1EC220C9006DE56D /* SongCVC.swift */,
+				E80894CF1EC36694006DE56D /* DescriptionTVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +251,7 @@
 				E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */,
 				E80894CB1EC2619C006DE56D /* SongVM.swift */,
 				E80894BD1EC203CD006DE56D /* Genres.swift */,
+				E80894D11EC36731006DE56D /* DescriptionVM.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			children = (
 				E80894A91EBD049F006DE56D /* TagTVCSpec.swift */,
 				E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */,
+				E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */,
 			);
 			name = VIewControllers;
 			sourceTree = "<group>";
@@ -423,12 +432,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80894D01EC36694006DE56D /* DescriptionTVC.swift in Sources */,
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
 				E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */,
 				E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */,
 				E80894AE1EBD0EC3006DE56D /* SubTagVM.swift in Sources */,
 				E80894B01EBD129F006DE56D /* SearchAda[ter.swift in Sources */,
 				E80894A81EBD01D3006DE56D /* TagVM.swift in Sources */,
+				E80894D21EC36731006DE56D /* DescriptionVM.swift in Sources */,
 				E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */,
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
 				E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */,
@@ -441,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80894D41EC368A9006DE56D /* DescriptionTVCSpec.swift in Sources */,
 				E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */,
 				E80894AC1EBD0E8B006DE56D /* SubTagSpec.swift in Sources */,
 				E80894A61EBD017F006DE56D /* TagSpec.swift in Sources */,
