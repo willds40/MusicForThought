@@ -16,6 +16,8 @@ class DescriptionTVC: UITableViewController {
         descriptionVM.searchTermBySongID = searchTermBySongId
     }
     
+   func mockSearchTermBySongID(searchTerm:Double)->Double{return 0.0}
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
