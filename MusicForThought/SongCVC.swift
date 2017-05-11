@@ -3,38 +3,36 @@
 import UIKit
 
 class SongCVC: UICollectionViewController {
-    var songVM:SongVM?
+    var songVM:SongsVM?
     var searchTerm = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        songVM = SongVM()
+        songVM = SongsVM()
         songVM?.searchTermByGenre = searchTerm
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionView), name: NSNotification.Name(rawValue: "reloadCollectionView"), object: nil)
    }
+    
+    func reloadCollectionView(){
+    self.reloadCollectionView()
+    }
+    
     func mockSearchTermByGenre(searchTerm:String)->String{return ""}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
+        }
  
-
-    // MARK: UICollectionViewDataSource
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return (songVM?.songs.count)!
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let borderColor: CGColor! = UIColor.black.cgColor
@@ -48,6 +46,8 @@ class SongCVC: UICollectionViewController {
         cell.image.image = itunesLogo
         cell.image.layer.borderWidth = borderWidth
         cell.image.layer.borderColor = borderColor
+        cell.songTitleLabel.text = "Google"
+        
         return cell
     }
     

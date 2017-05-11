@@ -1,5 +1,19 @@
 class Songs{
     
+    func getSongs(searchTermByGenre:String)->[[String:Any]]{
+        var allSongs = [[String:Any]]()
+        if (searchTermByGenre == "Rap"){
+        allSongs = getRapSongs()
+        }
+        if(searchTermByGenre == "Rock"){
+        allSongs = getRockSongs()
+        }
+        if (searchTermByGenre == "Search All Genres"){
+        allSongs = getAllSongs()
+        }
+        return allSongs
+    }
+    
     //Rap Songs
     var encore = ["id":1, "name":"99Problems", "Description":"Do you want more?", "Cover Art":"www.IOwnBrooklyn.com"] as [String : Any]
     var workoutPlan = ["id":2, "name":"WokoutPlan", "Description":"Get Fit On Kayne's plan", "Cover Art": "www.thisiskayne.com"] as [String : Any]
@@ -18,5 +32,8 @@ class Songs{
         let rockSongs = [help,imagine]
         return rockSongs
     }
-    
+    func getAllSongs()->[[String:Any]]{
+        let allSongs = [help,imagine,workoutPlan,encore]
+        return allSongs
+    }
 }
