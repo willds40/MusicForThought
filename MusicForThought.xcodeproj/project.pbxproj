@@ -46,6 +46,7 @@
 		E80894DF1EC4A273006DE56D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DE1EC4A273006DE56D /* Dictionary.swift */; };
 		E80894E21EC4A8D3006DE56D /* DictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */; };
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
+		E80894E91EC4D6F7006DE56D /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E81EC4D6F7006DE56D /* Songs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		E80894DE1EC4A273006DE56D /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySpec.swift; sourceTree = "<group>"; };
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
+		E80894E81EC4D6F7006DE56D /* Songs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 				E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */,
 				E80894CB1EC2619C006DE56D /* SongVM.swift */,
 				E80894D11EC36731006DE56D /* DescriptionVM.swift */,
+				E80894E81EC4D6F7006DE56D /* Songs.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80894E91EC4D6F7006DE56D /* Songs.swift in Sources */,
 				E80894D01EC36694006DE56D /* DescriptionTVC.swift in Sources */,
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
 				E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */,
