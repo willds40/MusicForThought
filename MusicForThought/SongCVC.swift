@@ -41,15 +41,19 @@ class SongCVC: UICollectionViewController {
         for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
-       
+        let song   = songVM?.songs[indexPath.row]
+        //find the value of dictionary when key === name
+        if let key = song?.keys.filter({ $0.lowercased().contains("name") }).first, let title = song?[key] {
+           cell.songTitleLabel.text = title as? String
+        }
+        
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
         cell.image.layer.borderWidth = borderWidth
         cell.image.layer.borderColor = borderColor
-        cell.songTitleLabel.text = "Google"
-        
         return cell
     }
+    
     
 
     /*
