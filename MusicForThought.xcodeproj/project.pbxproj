@@ -268,13 +268,13 @@
 		E80894981EBCDFBD006DE56D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E80894E81EC4D6F7006DE56D /* Songs.swift */,
 				E80894BD1EC203CD006DE56D /* Genres.swift */,
 				E80894B71EC0C4CF006DE56D /* Categories.swift */,
 				E80894A71EBD01D3006DE56D /* TagVM.swift */,
 				E80894AD1EBD0EC3006DE56D /* SubTagVM.swift */,
 				E80894CB1EC2619C006DE56D /* SongsVM.swift */,
 				E80894D11EC36731006DE56D /* DescriptionVM.swift */,
-				E80894E81EC4D6F7006DE56D /* Songs.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
