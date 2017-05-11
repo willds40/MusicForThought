@@ -8,11 +8,12 @@
 import Alamofire
 import Foundation
 class API{
+    var result:[String:String]?
     func searchReguest(endpoint:String)->Dictionary<String,String>{
         let url = endpoint
         var key = ""
         let value = " "
-        var result = [String:String]()
+        result = [String:String]()
         Alamofire.request(url)
             .responseJSON { response in
                 guard response.result.error == nil else {
@@ -39,7 +40,7 @@ class API{
                 }
                 key = tagID
         }
-        result[key] = value
-        return result
+        result?[key] = value
+        return result!
     }
 }

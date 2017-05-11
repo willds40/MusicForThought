@@ -45,6 +45,7 @@
 		E80894DD1EC3793D006DE56D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DC1EC3793D006DE56D /* API.swift */; };
 		E80894DF1EC4A273006DE56D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DE1EC4A273006DE56D /* Dictionary.swift */; };
 		E80894E21EC4A8D3006DE56D /* DictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */; };
+		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		E80894DC1EC3793D006DE56D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E80894DE1EC4A273006DE56D /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySpec.swift; sourceTree = "<group>"; };
+		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		E808946B1EBCD185006DE56D /* MusicForThoughtTests */ = {
 			isa = PBXGroup;
 			children = (
+				E80894E71EC4B480006DE56D /* Adapter */,
 				E80894E41EC4A8EB006DE56D /* API */,
 				E80894A21EBD012F006DE56D /* ViewModel */,
 				E80894A11EBD011C006DE56D /* VIewControllers */,
@@ -332,6 +335,14 @@
 			children = (
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		E80894E71EC4B480006DE56D /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				E80894E51EC4B477006DE56D /* AdapterSpec.swift */,
+			);
+			name = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +515,7 @@
 				E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */,
 				E80894E21EC4A8D3006DE56D /* DictionarySpec.swift in Sources */,
 				E80894AC1EBD0E8B006DE56D /* SubTagSpec.swift in Sources */,
+				E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */,
 				E80894A61EBD017F006DE56D /* TagSpec.swift in Sources */,
 				E80894D61EC36988006DE56D /* SongCVCSpec.swift in Sources */,
 				E80894AA1EBD049F006DE56D /* TagTVCSpec.swift in Sources */,
