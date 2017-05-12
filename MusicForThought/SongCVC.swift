@@ -6,6 +6,7 @@ class SongCVC: UICollectionViewController {
     var songVM:SongsVM?
     var searchTerm = ""
     var selectedRow = 0
+    var songTitle = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         songVM = SongsVM()
@@ -33,9 +34,14 @@ class SongCVC: UICollectionViewController {
         if let key = song?.keys.filter({ $0.lowercased().contains("id") }).first, let id = song?[key] {
            songID  = id as! Double
         }
+        if let key = song?.keys.filter({ $0.lowercased().contains("name") }).first, let name = song?[key] {
+            songTitle  = name as! String
+        }
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
                 descriptionTVC.searchTermBySongId = songID
+                descriptionTVC.title = songTitle
+                descriptionTVC.song = song!
             }
         }
     }
@@ -73,11 +79,7 @@ class SongCVC: UICollectionViewController {
     }
     
     
-    
-//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
-//        selectedRow = indexPath.row
-//        self.performSegue(withIdentifier: "DescriptionSegue", sender: self)
-//    }
+
 
     /*
     // Uncomment this method to specify if the specified item should be selected

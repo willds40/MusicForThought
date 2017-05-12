@@ -12,7 +12,7 @@ class DescriptionSpec: QuickSpec{
                     return descriptionVM.searchTermBySongID!
                 }
             }
-            context("search in TVC is equal to Rock"){
+            context("search in DescriptionVC is equal to songID"){
                 it("search term should be equal to Rock"){
                     let myClassInstance = mockDescriptionTVC()
                     let searchTerm = 22.0

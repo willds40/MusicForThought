@@ -27,11 +27,6 @@ class TagTVCSpec: QuickSpec{
                     }
                 }
             }
-            describe("title of tbv"){
-                it("should be 'Find Music By'"){
-                    expect(tagTVC.title).to(equal("FIND MUSIC BY"))
-                }
-            }
         }
     }
 }
