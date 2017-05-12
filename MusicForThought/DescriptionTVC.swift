@@ -48,15 +48,11 @@ class DescriptionTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        if ((songDescriptions[indexPath.row] as? String) != nil){
-            cell.textLabel?.text = songDescriptions[indexPath.row] as? String
-            print(cell.textLabel?.text ?? "default")
-        }else{
-            cell.textLabel?.text = String(describing: songDescriptions[indexPath.row])
+        if ((songDescriptions[indexPath.section] as? String) != nil){
+            cell.textLabel?.text = songDescriptions[indexPath.section] as? String
+            }else{
+            cell.textLabel?.text = String(describing: songDescriptions[indexPath.section])
         }
         return cell
     }
-    
-    
-    
 }
