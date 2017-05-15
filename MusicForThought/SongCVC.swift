@@ -15,31 +15,15 @@ class SongCVC: UICollectionViewController {
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         collectionView?.isUserInteractionEnabled = true
-   }
-
+    }
+    
     func mockSearchTermByGenre(searchTerm:String)->String{return ""}
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let song   = songVM?.songs[selectedRow]
-       songID = (songVM?.getSongByID(song!))!
-        
-        
-        if let key = song?.keys.filter({ $0.lowercased().contains("name") }).first, let name = song?[key] {
-            songTitle  = name as! String
-        }
-        if segue.identifier == "DescriptionSegue" {
-            if let descriptionTVC = segue.destination as? DescriptionTVC {
-                descriptionTVC.searchTermBySongId = songID
-                descriptionTVC.title = songTitle
-                descriptionTVC.song = song!
-            }
-        }
-    }
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    
+       override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -50,12 +34,12 @@ class SongCVC: UICollectionViewController {
         let borderColor: CGColor! = UIColor.black.cgColor
         let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
-        for: indexPath) as! SongCell
+                                                      for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
         let song   = songVM?.songs[indexPath.row]
         if let key = song?.keys.filter({ $0.lowercased().contains("name") }).first, let title = song?[key] {
-           cell.songTitleLabel.text = title as? String
+            cell.songTitleLabel.text = title as? String
         }
         
         let itunesLogo = UIImage(named:"itunes.jpg")
@@ -64,10 +48,20 @@ class SongCVC: UICollectionViewController {
         cell.image.layer.borderColor = borderColor
         return cell
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedRow = indexPath.row
         self.performSegue(withIdentifier: "DescriptionSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let song   = songVM?.songs[selectedRow]
+        if segue.identifier == "DescriptionSegue" {
+            if let descriptionTVC = segue.destination as? DescriptionTVC {
+                descriptionTVC.searchTermBySongId = songVM?.getSongByID(song!)
+                descriptionTVC.title = (songVM?.getSongByTitle(song!))!
+                descriptionTVC.song = song!
+            }
+        }
     }
 }
 

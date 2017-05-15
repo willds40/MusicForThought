@@ -4,6 +4,7 @@ class SongsVM{
     var searchAdapter = SearchAdapter()
     var songID = 0.0
     var songs = [[String:Any]]()
+    var songTitle = ""
     var searchTermByGenre = ""{
         didSet{
          songs = Songs().getSongs(searchTermByGenre: searchTermByGenre)
@@ -14,5 +15,11 @@ class SongsVM{
             songID  = id as! Double
         }
         return songID
+    }
+    func getSongByTitle(_ song: [String:Any])->String{
+        if let key = song.keys.filter({ $0.lowercased().contains("name") }).first, let name = song[key] {
+            songTitle  = name as! String
+        }
+        return songTitle
     }
 }
