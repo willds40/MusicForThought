@@ -14,13 +14,8 @@ class Songs{
         return allSongs
     }
     
-//    func getSeongbyID(_ searchTermBySongID:Double)->[String:Any]{
-//        let song = [String:Any]()
-//        return song
-//
-//        
-//                   }
-
+       
+    
     
     //Rap Songs
     var encore = ["id":1.0, "name":"Encore", "Description":"Do you want more?", "Cover Art":"www.IOwnBrooklyn.com"] as [String : Any]

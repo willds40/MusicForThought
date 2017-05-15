@@ -25,10 +25,9 @@ class SongCVC: UICollectionViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let song   = songVM?.songs[selectedRow]
+       songID = (songVM?.getSongByID(song!))!
         
-        if let key = song?.keys.filter({ $0.lowercased().contains("id") }).first, let id = song?[key] {
-           songID  = id as! Double
-        }
+        
         if let key = song?.keys.filter({ $0.lowercased().contains("name") }).first, let name = song?[key] {
             songTitle  = name as! String
         }
@@ -40,7 +39,6 @@ class SongCVC: UICollectionViewController {
             }
         }
     }
- 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
