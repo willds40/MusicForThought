@@ -2,7 +2,6 @@ import UIKit
 
 class TagTVC: UITableViewController {
     var tagVM:TagVM?
-    //var rowTitleSelected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +37,8 @@ class TagTVC: UITableViewController {
                 let path = self.tableView.indexPathForSelectedRow!
                 subTagTVC.title = self.tagVM?.tags[path.row]
                 subTagTVC.searchTerm = (self.tagVM?.tags[path.row])!
-                 //rowTitleSelected = subTagTVC.searchTerm
             }
         }
-        
     }
 }
 
