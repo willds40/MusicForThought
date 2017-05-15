@@ -7,6 +7,7 @@ class SongCVC: UICollectionViewController {
     var searchTerm = ""
     var selectedRow = 0
     var songTitle = ""
+    var songID = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         songVM = SongsVM()
@@ -23,7 +24,6 @@ class SongCVC: UICollectionViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var songID = 0.0
         let song   = songVM?.songs[selectedRow]
         
         if let key = song?.keys.filter({ $0.lowercased().contains("id") }).first, let id = song?[key] {

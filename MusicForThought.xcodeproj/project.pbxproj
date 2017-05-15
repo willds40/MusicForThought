@@ -303,8 +303,8 @@
 			children = (
 				E80894A91EBD049F006DE56D /* TagTVCSpec.swift */,
 				E80894B91EC0C558006DE56D /* SubTagTVCSpec.swift */,
-				E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */,
 				E80894D51EC36988006DE56D /* SongCVCSpec.swift */,
+				E80894D31EC368A9006DE56D /* DescriptionTVCSpec.swift */,
 			);
 			name = VIewControllers;
 			sourceTree = "<group>";
