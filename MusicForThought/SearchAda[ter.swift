@@ -12,11 +12,8 @@ class SearchAdapter {
     }
     
     func searchByGenre(_searchTerm:String){
-    
-    
     }
     
     func searchBySong(_searchBySongID:Double){
-    
     }
 }

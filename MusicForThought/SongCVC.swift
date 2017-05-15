@@ -13,14 +13,9 @@ class SongCVC: UICollectionViewController {
         songVM?.searchTermByGenre = searchTerm
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionView), name: NSNotification.Name(rawValue: "reloadCollectionView"), object: nil)
         collectionView?.isUserInteractionEnabled = true
    }
-    
-    func reloadCollectionView(){
-    self.reloadCollectionView()
-    }
-    
+
     func mockSearchTermByGenre(searchTerm:String)->String{return ""}
 
     override func didReceiveMemoryWarning() {

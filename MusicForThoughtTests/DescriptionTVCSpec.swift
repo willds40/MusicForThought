@@ -14,17 +14,13 @@ class DescriptionTVCSpec: QuickSpec{
             it(" should be loaded and not be nil"){
                 expect(descriptionTVC.view).toNot(beNil())
             }
-            describe("title"){
-                it("should be equal to the song that was selectd in songCVC"){
-                    let songCVC = SongCVC()
-                    songCVC.songTitle = "Workout Plan"
-                    
-                    expect(descriptionTVC.title).to(equal("Workout Plan"))
-                    
-                }
-            }
-            
+            //    describe("title"){
+            //    it ("should be equal to the song in songcvc"){
+            //    let songCVC = SongVC()
+            //    songCVC.songTitle = "Wokroutplan"
+            //    expect(tagTVC.numberOfSections(in: tagTVC.view as! UITableView)).to(equal(1))
+            //    }
+            //    }
         }
     }
 }
-

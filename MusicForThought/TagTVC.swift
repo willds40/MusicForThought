@@ -1,16 +1,8 @@
-//
-//  TagTVC.swift
-//  MusicForThought
-//
-//  Created by Will Devon-Sand on 5/5/17.
-//  Copyright © 2017 Will Devon-Sand. All rights reserved.
-//
-
 import UIKit
 
 class TagTVC: UITableViewController {
     var tagVM:TagVM?
-    var rowTitleSelected = ""
+    //var rowTitleSelected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +13,6 @@ class TagTVC: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -47,7 +38,7 @@ class TagTVC: UITableViewController {
                 let path = self.tableView.indexPathForSelectedRow!
                 subTagTVC.title = self.tagVM?.tags[path.row]
                 subTagTVC.searchTerm = (self.tagVM?.tags[path.row])!
-                 rowTitleSelected = subTagTVC.searchTerm
+                 //rowTitleSelected = subTagTVC.searchTerm
             }
         }
         
