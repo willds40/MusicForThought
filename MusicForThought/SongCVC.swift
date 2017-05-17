@@ -6,8 +6,6 @@ class SongCVC: UICollectionViewController {
     var songVM:SongsVM?
     var searchTerm = ""
     var selectedRow = 0
-    var songTitle = ""
-    var songID = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         songVM = SongsVM()
@@ -23,25 +21,21 @@ class SongCVC: UICollectionViewController {
         super.didReceiveMemoryWarning()
     }
     
-       override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return (songVM?.songs.count)!
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let borderColor: CGColor! = UIColor.black.cgColor
         let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
-                                                      for: indexPath) as! SongCell
+            for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
         let song   = songVM?.songs[indexPath.row]
-        if let key = song?.keys.filter({ $0.lowercased().contains("name") }).first, let title = song?[key] {
-            cell.songTitleLabel.text = title as? String
-        }
-        
+        cell.songTitleLabel.text = songVM?.getSongByTitle(song!)
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
         cell.image.layer.borderWidth = borderWidth
@@ -58,7 +52,7 @@ class SongCVC: UICollectionViewController {
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
                 descriptionTVC.searchTermBySongId = songVM?.getSongByID(song!)
-                descriptionTVC.title = (songVM?.getSongByTitle(song!))!
+                descriptionTVC.title = songVM?.getSongByTitle(song!)
                 descriptionTVC.song = song!
             }
         }
