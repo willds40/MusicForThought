@@ -32,7 +32,7 @@ class DescriptionTVC: UITableViewController {
         if ((descriptionVM.songDescription?[indexPath.section] as? String) != nil){
             cell.textLabel?.text = descriptionVM.songDescription?[indexPath.section] as? String
         }else{
-            cell.textLabel?.text = String(describing: descriptionVM.songDescription?[indexPath.section])
+            cell.textLabel?.text = String(describing: descriptionVM.songDescription![indexPath.section])
         }
         return cell
     }
