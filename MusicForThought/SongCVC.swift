@@ -34,8 +34,8 @@ class SongCVC: UICollectionViewController {
             for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
-        let song   = songVM?.songs[indexPath.row]
-        cell.songTitleLabel.text = songVM?.getSongByTitle(song!)
+       let song   = songVM?.songs[indexPath.row]
+        cell.songTitleLabel.text = song?.songTitle
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
         cell.image.layer.borderWidth = borderWidth
@@ -47,6 +47,7 @@ class SongCVC: UICollectionViewController {
         selectedRow = indexPath.row
         self.performSegue(withIdentifier: "DescriptionSegue", sender: self)
     }
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let song   = songVM?.songs[selectedRow]
         if segue.identifier == "DescriptionSegue" {
@@ -57,5 +58,6 @@ class SongCVC: UICollectionViewController {
             }
         }
     }
+ */
 }
 
