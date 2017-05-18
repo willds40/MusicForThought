@@ -3,25 +3,25 @@ import UIKit
 class DescriptionTVC: UITableViewController {
     let descriptionVM = DescriptionVM()
     var searchTermBySongId:Double?
-    var song = [String:Any]()
+    var song:Song?
     
     override func viewDidLoad() {
+        descriptionVM.addSong(song!)
         super.viewDidLoad()
-        descriptionVM.song = song
-        descriptionVM.searchTermBySongID = searchTermBySongId
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return descriptionVM.songDescription!.count
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
+    /*
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return descriptionVM.songTitles?[section]
+        return descriptionVM.songLib.count
     }
+    */
     
     private struct Storyboard{
         static let TagCellIndetifier = "DescriptionCell"
@@ -29,13 +29,11 @@ class DescriptionTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        if ((descriptionVM.songDescription?[indexPath.section] as? String) != nil){
-            cell.textLabel?.text = descriptionVM.songDescription?[indexPath.section] as? String
-        }else{
-            cell.textLabel?.text = String(describing: descriptionVM.songDescription![indexPath.section])
-        }
+        let song  = descriptionVM.songLib[indexPath.section]
+        cell.textLabel?.text = song.description
         return cell
     }
+
     
     func mockSearchTermBySongID(searchTerm:Double)->Double{return 0.0}
 }

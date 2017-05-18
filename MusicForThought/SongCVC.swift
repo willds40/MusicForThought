@@ -47,17 +47,15 @@ class SongCVC: UICollectionViewController {
         selectedRow = indexPath.row
         self.performSegue(withIdentifier: "DescriptionSegue", sender: self)
     }
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let song   = songVM?.songs[selectedRow]
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
-                descriptionTVC.searchTermBySongId = songVM?.getSongByID(song!)
-                descriptionTVC.title = songVM?.getSongByTitle(song!)
                 descriptionTVC.song = song!
             }
         }
     }
- */
+ 
 }
 
