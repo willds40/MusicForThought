@@ -1,18 +1,5 @@
-class Songs{
-    func getSongs(searchTermByGenre:String)->[Song]{
-        var allSongs = [Song]()
-        if (searchTermByGenre == "Rap"){
-        allSongs = getRapSongs()
-        }
-        if(searchTermByGenre == "Rock"){
-        allSongs = getRockSongs()
-        }
-        if (searchTermByGenre == "Search All Genres"){
-        allSongs = getAllSongs()
-        }
-        return allSongs
-    }
-    
+class SongLibrary{
+        
     func getRapSongs()->[Song]{
         let rapSongs = [encore,workoutPlan]
         return rapSongs

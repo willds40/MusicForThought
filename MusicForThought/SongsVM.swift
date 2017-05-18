@@ -7,7 +7,7 @@ class SongsVM{
     var songTitle = ""
     var searchTermByGenre = ""{
         didSet{
-         songs = Songs().getSongs(searchTermByGenre: searchTermByGenre)
+         songs = SearchAdapter().getSongs(searchTermByGenre: searchTermByGenre)
         }
     }
     func getSongByID(_ song:[String:Any])->Double{
