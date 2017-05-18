@@ -48,6 +48,7 @@
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
 		E80894E91EC4D6F7006DE56D /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E81EC4D6F7006DE56D /* Songs.swift */; };
 		E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894EC1EC501D7006DE56D /* ToDo.swift */; };
+		E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F5071ECE231E00CC1C8C /* Song.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
 		E80894E81EC4D6F7006DE56D /* Songs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
 		E80894EC1EC501D7006DE56D /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		E8C6F5071ECE231E00CC1C8C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				E80894E81EC4D6F7006DE56D /* Songs.swift */,
+				E8C6F5071ECE231E00CC1C8C /* Song.swift */,
 				E80894BD1EC203CD006DE56D /* Genres.swift */,
 				E80894B71EC0C4CF006DE56D /* Categories.swift */,
 				E80894A71EBD01D3006DE56D /* TagVM.swift */,
@@ -508,6 +511,7 @@
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
 				E80894DF1EC4A273006DE56D /* Dictionary.swift in Sources */,
 				E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */,
+				E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */,
 				E80894BE1EC203CD006DE56D /* Genres.swift in Sources */,
 				E80894CC1EC2619C006DE56D /* SongsVM.swift in Sources */,
 			);
