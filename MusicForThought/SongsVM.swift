@@ -7,9 +7,11 @@ class SongsVM{
     var songTitle = ""
     var searchTermByGenre = ""{
         didSet{
-         songs = SearchAdapter().getSongs(searchTermByGenre: searchTermByGenre)
+        songs = searchAdapter.getSongsByGenre(searchTermByGenre)
         }
     }
+    
+    
     func getSongByID(_ song:[String:Any])->Double{
         if let key = song.keys.filter({ $0.lowercased().contains("id") }).first, let id = song[key] {
             songID  = id as! Double

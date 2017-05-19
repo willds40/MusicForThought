@@ -4,6 +4,7 @@ class SearchAdapter {
     var api = API()
     var categories:Categories!
     var result:[String:String]!
+    var songLib = SongLibrary()
     
     func searchMusicByCategory(_ searchTerm:String){
     categories = Categories()
@@ -11,19 +12,19 @@ class SearchAdapter {
      categories.categoriesDictionary.merge(dict: result)
     }
     
-    func getSongs(searchTermByGenre:String)->[Song]{
-        let songLibrary = SongLibrary()
-        var allSongs = [Song]()
-        if (searchTermByGenre == "Rap"){
-            allSongs = songLibrary.getRapSongs()
+    
+    func getSongsByGenre(_ searchTerm:String)->[Song]{
+        let fetchedSongLib = songLib.getSongLib()
+        var fetchedSongs = [Song]()
+        for song in fetchedSongLib{
+            if (searchTerm == song.genre){
+                fetchedSongs.append(song)
+            }
         }
-        if(searchTermByGenre == "Rock"){
-            allSongs = songLibrary.getRockSongs()        }
-        if (searchTermByGenre == "Search All Genres"){
-            allSongs = songLibrary.getAllSongs()
-        }
-        return allSongs
+        return fetchedSongs
     }
+    
+    
     
     
     
