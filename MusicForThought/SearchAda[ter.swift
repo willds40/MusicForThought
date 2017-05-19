@@ -2,14 +2,14 @@
 import Foundation
 class SearchAdapter {
     var api = API()
-    var categories:Categories!
+    //var categories:Categories!
     var result:[String:String]!
     var songLib = SongLibrary()
+    var genreLib = GenresLibrary()
     
-    func searchMusicByCategory(_ searchTerm:String){
-        categories = Categories()
-        result = api.searchReguest(endpoint: "/api/1/" + searchTerm)
-        categories.categoriesDictionary.merge(dict: result)
+    func searchMusicByCategory(_ searchTerm:String) ->[Genre]{
+    let fetchedGenreLib = genreLib.getGenreLib()
+        return fetchedGenreLib
     }
     
     func searchSongsByGenre(_ searchTerm:String)->[Song]{

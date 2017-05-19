@@ -27,7 +27,8 @@ class TagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        cell.textLabel?.text = tagVM?.tags[indexPath.row]
+        let category = tagVM?.tags[indexPath.row]
+        cell.textLabel?.text = category?.type
         return cell
     }
     
@@ -35,8 +36,10 @@ class TagTVC: UITableViewController {
         if segue.identifier == "SubTagSegue" {
             if let subTagTVC = segue.destination as? SubTagTVC {
                 let path = self.tableView.indexPathForSelectedRow!
-                subTagTVC.title = self.tagVM?.tags[path.row]
-                subTagTVC.searchTerm = (self.tagVM?.tags[path.row])!
+                let category = self.tagVM?.tags[path.row]
+                subTagTVC.title = category?.type
+                subTagTVC.searchTerm = (category?.type!)!
+                
             }
         }
     }

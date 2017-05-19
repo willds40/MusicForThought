@@ -15,7 +15,7 @@ class SubTagTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (subTagVM?.genres.count)!
+        return (subTagVM?.genres!.count)!
     }
     
     private struct Storyboard{
@@ -24,7 +24,7 @@ class SubTagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        let genre = subTagVM?.genres[indexPath.row]
+        let genre = subTagVM?.genres?[indexPath.row]
         cell.textLabel?.text = genre?.type
         return cell
     }
@@ -33,7 +33,7 @@ class SubTagTVC: UITableViewController {
         if segue.identifier == "SongSegue" {
             if let songCVC = segue.destination as? SongCVC {
                 let path = self.tableView.indexPathForSelectedRow!
-                let genre = subTagVM?.genres[path.row]
+                let genre = subTagVM?.genres?[path.row]
                 songCVC.title = genre?.type
                 songCVC.searchTerm = (genre?.type!)!
             }
