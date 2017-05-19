@@ -13,7 +13,14 @@ class SearchAdapter {
     }
     
     
+    
+    
+    
+    //
     func getSongsByGenre(_ searchTerm:String)->[Song]{
+        //passes info to the api
+        //api.searchReguest(endpoint: searchTerm)
+        //interprets info from the song lib
         let fetchedSongLib = songLib.getSongLib()
         var fetchedSongs = [Song]()
         for song in fetchedSongLib{
