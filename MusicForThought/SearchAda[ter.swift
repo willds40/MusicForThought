@@ -11,13 +11,8 @@ class SearchAdapter {
     result = api.searchReguest(endpoint: "/api/1/" + searchTerm)
      categories.categoriesDictionary.merge(dict: result)
     }
-    
-    
-    
-    
-    
-    //
-    func getSongsByGenre(_ searchTerm:String)->[Song]{
+
+    func searchSongsByGenre(_ searchTerm:String)->[Song]{
         //passes info to the api
         //api.searchReguest(endpoint: searchTerm)
         //interprets info from the song lib
