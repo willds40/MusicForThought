@@ -9,11 +9,8 @@ import Alamofire
 import Foundation
 class API{
     var result:[String:String]?
-    func searchReguest(endpoint:String)->Dictionary<String,String>{
+    func searchReguest(endpoint:String){
         let url = endpoint
-        var key = ""
-        let value = " "
-        result = [String:String]()
         Alamofire.request(url)
             .responseJSON { response in
                 guard response.result.error == nil else {
@@ -27,20 +24,19 @@ class API{
                     return
                 }
                 // get and print the title
-                guard let tagTitle = json["title"] as? String else {
+                guard (json["title"] as? String) != nil else {
                     print("Could not get todo title from JSON")
                     return
                 }
-                key = tagTitle
+               // key = tagTitle instead add to lib
                 // get and print the id
-                guard let tagID = json["id"] as? String
+                guard (json["id"] as? String) != nil
                     else {
                         print("Could not get id from JSON")
                         return
                 }
-                key = tagID
+                //key = tagID//add to lib
         }
-        result?[key] = value
-        return result!
-    }
+        
+            }
 }
