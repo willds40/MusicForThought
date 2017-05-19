@@ -48,6 +48,7 @@
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
 		E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E81EC4D6F7006DE56D /* SongLibrary.swift */; };
 		E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894EC1EC501D7006DE56D /* ToDo.swift */; };
+		E8AA05701ECF7FB6004FD192 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */; };
 		E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F5071ECE231E00CC1C8C /* Song.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,8 +135,9 @@
 		E80894DE1EC4A273006DE56D /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySpec.swift; sourceTree = "<group>"; };
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
-		E80894E81EC4D6F7006DE56D /* SongLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongLibrary.swift; sourceTree = "<group>"; };
+		E80894E81EC4D6F7006DE56D /* SongLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongLibrary.swift; path = MusicForThought/SongLibrary.swift; sourceTree = "<group>"; };
 		E80894EC1EC501D7006DE56D /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E8C6F5071ECE231E00CC1C8C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				E80894EC1EC501D7006DE56D /* ToDo.swift */,
-				E80894E01EC4A27A006DE56D /* Extensions */,
 				E80894561EBCD185006DE56D /* MusicForThought */,
 				E808946B1EBCD185006DE56D /* MusicForThoughtTests */,
 				E80894761EBCD185006DE56D /* MusicForThoughtUITests */,
@@ -194,6 +195,8 @@
 		E80894561EBCD185006DE56D /* MusicForThought */ = {
 			isa = PBXGroup;
 			children = (
+				E80894E01EC4A27A006DE56D /* Extensions */,
+				E8AA056E1ECF7F12004FD192 /* Data */,
 				E808949A1EBCDFD8006DE56D /* APIS */,
 				E80894991EBCDFD0006DE56D /* Adapters */,
 				E80894981EBCDFBD006DE56D /* ViewModels */,
@@ -273,7 +276,6 @@
 		E80894981EBCDFBD006DE56D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E80894E81EC4D6F7006DE56D /* SongLibrary.swift */,
 				E8C6F5071ECE231E00CC1C8C /* Song.swift */,
 				E80894BD1EC203CD006DE56D /* Genres.swift */,
 				E80894B71EC0C4CF006DE56D /* Categories.swift */,
@@ -329,6 +331,7 @@
 				E80894DE1EC4A273006DE56D /* Dictionary.swift */,
 			);
 			name = Extensions;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E80894E31EC4A8E0006DE56D /* Extensions */ = {
@@ -352,6 +355,16 @@
 				E80894E51EC4B477006DE56D /* AdapterSpec.swift */,
 			);
 			name = Adapter;
+			sourceTree = "<group>";
+		};
+		E8AA056E1ECF7F12004FD192 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */,
+				E80894E81EC4D6F7006DE56D /* SongLibrary.swift */,
+			);
+			name = Data;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,6 +512,7 @@
 			files = (
 				E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */,
 				E80894D01EC36694006DE56D /* DescriptionTVC.swift in Sources */,
+				E8AA05701ECF7FB6004FD192 /* JSONParser.swift in Sources */,
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
 				E80894B81EC0C4CF006DE56D /* Categories.swift in Sources */,
 				E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */,
