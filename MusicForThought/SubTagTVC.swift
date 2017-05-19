@@ -24,7 +24,8 @@ class SubTagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        cell.textLabel?.text = subTagVM?.genres[indexPath.row]
+        let genre = subTagVM?.genres[indexPath.row]
+        cell.textLabel?.text = genre?.type
         return cell
     }
     
@@ -32,10 +33,12 @@ class SubTagTVC: UITableViewController {
         if segue.identifier == "SongSegue" {
             if let songCVC = segue.destination as? SongCVC {
                 let path = self.tableView.indexPathForSelectedRow!
-                songCVC.title = self.subTagVM?.genres[path.row]
-                songCVC.searchTerm = (self.subTagVM?.genres[path.row])!
+                let genre = subTagVM?.genres[path.row]
+                songCVC.title = genre?.type
+                songCVC.searchTerm = (genre?.type!)!
             }
         }
     }
+    
     func mockSetSearchTermByCategory(searchTerm:String)->String{return ""}
 }
