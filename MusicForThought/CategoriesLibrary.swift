@@ -6,7 +6,6 @@ class CategoriesLibrary{
     var albumCateogry = Category(type: "Album")
     var genreCategory = Category (type: "Genre")
     
-    
     func getCatLib()->[Category]{
         var catLib = [Category]()
         catLib.append(artistCategory)
@@ -14,6 +13,5 @@ class CategoriesLibrary{
         catLib.append(genreCategory)
         return catLib
     }
-
 }
 

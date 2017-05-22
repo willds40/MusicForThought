@@ -11,4 +11,5 @@ class DescriptionVM{
         songLib.append(song.description!)
         songLib.append(song.coverArt!)
     }
+    var sectionHeaders = ["Title", "ID", "Description", "Cover Art"]
 }

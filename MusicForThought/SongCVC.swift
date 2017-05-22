@@ -6,6 +6,7 @@ class SongCVC: UICollectionViewController {
     var songVM:SongsVM?
     var searchTerm = ""
     var selectedRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         songVM = SongsVM()
@@ -14,8 +15,6 @@ class SongCVC: UICollectionViewController {
         self.collectionView?.dataSource = self
         collectionView?.isUserInteractionEnabled = true
     }
-    
-    func mockSearchTermByGenre(searchTerm:String)->String{return ""}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,10 +30,10 @@ class SongCVC: UICollectionViewController {
         let borderColor: CGColor! = UIColor.black.cgColor
         let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
-            for: indexPath) as! SongCell
+        for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
-       let song   = songVM?.songs[indexPath.row]
+        let song   = songVM?.songs[indexPath.row]
         cell.songTitleLabel.text = song?.songTitle
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
@@ -56,6 +55,7 @@ class SongCVC: UICollectionViewController {
             }
         }
     }
- 
+    
+    func mockSearchTermByGenre(searchTerm:String)->String{return ""}
 }
 

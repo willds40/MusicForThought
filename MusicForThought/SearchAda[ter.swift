@@ -1,8 +1,7 @@
-
 import Foundation
+
 class SearchAdapter {
     var api = API()
-    //var categories:Categories!
     var result:[String:String]!
     var songLib = SongLibrary()
     var genreLib = GenresLibrary()
@@ -31,9 +30,8 @@ class SearchAdapter {
         }
     }
     
-    func searchByGenre(_searchTerm:String){
-    }
-    
-    func searchBySong(_searchBySongID:Double){
-    }
+//    func searchSongById(_ id:Double)->[Song]{
+//        let fetchedSongLib = songLib.getSongLib()
+//        return fetchedSongLib
+//}
 }

@@ -17,11 +17,11 @@ class DescriptionTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    /*
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return descriptionVM.songLib.count
+        return descriptionVM.sectionHeaders[section]
     }
-    */
+    
     
     private struct Storyboard{
         static let TagCellIndetifier = "DescriptionCell"
@@ -34,6 +34,5 @@ class DescriptionTVC: UITableViewController {
         return cell
     }
 
-    
     func mockSearchTermBySongID(searchTerm:Double)->Double{return 0.0}
 }

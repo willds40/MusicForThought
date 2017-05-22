@@ -1,12 +1,6 @@
-//
-//  API.swift
-//  MusicForThought
-//
-//  Created by Will Devon-Sand on 5/10/17.
-//  Copyright © 2017 Will Devon-Sand. All rights reserved.
-//
 import Alamofire
 import Foundation
+
 class API{
     var result:[String:String]?
     func searchReguest(endpoint:String){
