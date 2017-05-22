@@ -8,7 +8,7 @@ class SongLibrary{
     
     var imagine = Song(songTitle: "Imagine", id: 4.0, description: "World Peace", coverArt: "www,IAmStillAlive.com",genre:"Rock")
     
-    func getSongLib()->[Song]{
+    func getSongLib(song:String?)->[Song]{
         songLib.append(encore)
         songLib.append(workoutPlan)
         songLib.append(help)

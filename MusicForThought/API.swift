@@ -2,8 +2,7 @@ import Alamofire
 import Foundation
 
 class API{
-    var result:[String:String]?
-    func searchReguest(endpoint:String){
+    func searchReguestByGenreOrCategory(endpoint:String){
         let url = endpoint
         Alamofire.request(url)
             .responseJSON { response in
@@ -18,19 +17,12 @@ class API{
                     return
                 }
                 // get and print the title
-                guard (json["title"] as? String) != nil else {
+                guard (json["song"] as? String) != nil else {
+                    
                     print("Could not get todo title from JSON")
                     return
+                    
                 }
-               // key = tagTitle instead add to lib
-                // get and print the id
-                guard (json["id"] as? String) != nil
-                    else {
-                        print("Could not get id from JSON")
-                        return
-                }
-                //key = tagID//add to lib
         }
-        
-            }
+    }
 }

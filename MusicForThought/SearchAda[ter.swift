@@ -15,7 +15,7 @@ class SearchAdapter {
         //passes info to the api
         //api.searchReguest(endpoint: searchTerm)
         //interprets info from the song lib
-        let fetchedSongLib = songLib.getSongLib()
+        let fetchedSongLib = songLib.getSongLib(song: nil)
         if searchTerm != "Search All Genre"{
             var fetchedSongs = [Song]()
             for song in fetchedSongLib{
