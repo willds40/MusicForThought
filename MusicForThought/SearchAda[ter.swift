@@ -7,14 +7,13 @@ class SearchAdapter {
     var genreLib = GenresLibrary()
     
     func searchMusicByCategory(_ searchTerm:String) ->[Genre]{
+        api.searchReguest(endpoint: searchTerm, endPontID: nil, endPointID2: nil)
     let fetchedGenreLib = genreLib.getGenreLib()
         return fetchedGenreLib
     }
     
     func searchSongsByGenre(_ searchTerm:String)->[Song]{
-        //passes info to the api
-        //api.searchReguest(endpoint: searchTerm)
-        //interprets info from the song lib
+        api.searchReguest(endpoint: searchTerm, endPontID: nil, endPointID2: nil)
         let fetchedSongLib = songLib.getSongLib(song: nil)
         if searchTerm != "Search All Genre"{
             var fetchedSongs = [Song]()
@@ -30,8 +29,13 @@ class SearchAdapter {
         }
     }
     
-//    func searchSongById(_ id:Double)->[Song]{
-//        let fetchedSongLib = songLib.getSongLib()
-//        return fetchedSongLib
-//}
+    func searchSongById(ID:Double, ID2:Double?)->[Song]{
+        if ID2 == nil {
+            api.searchReguest(endpoint: nil, endPontID: ID, endPointID2: nil)
+        } else {
+            api.searchReguest(endpoint: nil, endPontID: ID, endPointID2: ID2)
+        }
+        let fetchedSongLib = songLib.getSongLib(song: nil)
+        return fetchedSongLib
+}
 }

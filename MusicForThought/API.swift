@@ -2,9 +2,16 @@ import Alamofire
 import Foundation
 
 class API{
-    func searchReguestByGenreOrCategory(endpoint:String){
-        let url = endpoint
-        Alamofire.request(url)
+    func searchReguest(endpoint:String?, endPontID:Double?, endPointID2: Double?){
+        var url:String?
+        if endpoint != nil {
+            url = endpoint
+        } else if (endPontID != nil) && endPointID2 != nil {
+            url = String(describing: endPontID) + String(describing: endPointID2)
+        }else{
+        url = String(describing: endPontID)
+        }
+        Alamofire.request(url!)
             .responseJSON { response in
                 guard response.result.error == nil else {
                     print("error calling GET on endpoint")
@@ -17,8 +24,8 @@ class API{
                     return
                 }
                 // get and print the title
-                guard (json["song"] as? String) != nil else {
-                    
+                guard (json["song"] as? Song) != nil else {
+                  _ = SongLibrary().getSongLib(song: json["song"] as! Song?)
                     print("Could not get todo title from JSON")
                     return
                     
