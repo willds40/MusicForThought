@@ -14,7 +14,7 @@ class TagTVCSpec: QuickSpec{
             it(" should be loaded and not be nil"){
                 expect(tagTVC.view).toNot(beNil())
             }
-                describe("number of sections"){
+            describe("number of sections"){
                 it ("should be equal to 1"){
                     expect(tagTVC.numberOfSections(in: tagTVC.view as! UITableView)).to(equal(1))
                 }
@@ -27,6 +27,17 @@ class TagTVCSpec: QuickSpec{
                     }
                 }
             }
+            describe ("searchTerm of SubtagTVC"){
+            let subTagTVC = SubTagTVC()
+                it("should be the same as category of TagTVC"){
+                tagTVC.category = Category(type: "Artist")
+                tagTVC.prepare(for: UIStoryboardSegue.init(identifier: "SubTagSegue", source: tagTVC, destination: subTagTVC), sender: tagTVC)
+                expect(subTagTVC.searchTerm).to(equal("Artist"))
+                }
+            }
+            
         }
     }
 }
+
+

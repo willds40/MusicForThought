@@ -2,7 +2,7 @@ import UIKit
 
 class SubTagTVC: UITableViewController {
     var subTagVM:SubTagVM?
-    var searchTerm = ""
+    var searchTerm:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

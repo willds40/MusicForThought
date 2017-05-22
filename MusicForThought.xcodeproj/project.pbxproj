@@ -50,7 +50,7 @@
 		E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894EC1EC501D7006DE56D /* ToDo.swift */; };
 		E8AA05701ECF7FB6004FD192 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */; };
 		E8AA05731ECF80EE004FD192 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05721ECF80EE004FD192 /* Genres.swift */; };
-		E8AA05751ECF8C3A004FD192 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05741ECF8C3A004FD192 /* Categories.swift */; };
+		E8AA05751ECF8C3A004FD192 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05741ECF8C3A004FD192 /* Category.swift */; };
 		E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F5071ECE231E00CC1C8C /* Song.swift */; };
 /* End PBXBuildFile section */
 
@@ -141,7 +141,7 @@
 		E80894EC1EC501D7006DE56D /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E8AA05721ECF80EE004FD192 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
-		E8AA05741ECF8C3A004FD192 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		E8AA05741ECF8C3A004FD192 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E8C6F5071ECE231E00CC1C8C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,7 +376,7 @@
 			children = (
 				E8AA05721ECF80EE004FD192 /* Genres.swift */,
 				E8C6F5071ECE231E00CC1C8C /* Song.swift */,
-				E8AA05741ECF8C3A004FD192 /* Categories.swift */,
+				E8AA05741ECF8C3A004FD192 /* Category.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 				E80894DF1EC4A273006DE56D /* Dictionary.swift in Sources */,
 				E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */,
 				E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */,
-				E8AA05751ECF8C3A004FD192 /* Categories.swift in Sources */,
+				E8AA05751ECF8C3A004FD192 /* Category.swift in Sources */,
 				E80894BE1EC203CD006DE56D /* GenresLibrary.swift in Sources */,
 				E80894CC1EC2619C006DE56D /* SongsVM.swift in Sources */,
 			);

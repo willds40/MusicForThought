@@ -2,6 +2,7 @@ import UIKit
 
 class TagTVC: UITableViewController {
     var tagVM:TagVM?
+    var category:Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,12 @@ class TagTVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SubTagSegue" {
             if let subTagTVC = segue.destination as? SubTagTVC {
+                if self.tableView.indexPathForSelectedRow != nil{
                 let path = self.tableView.indexPathForSelectedRow!
-                let category = self.tagVM?.tags[path.row]
+                    category = self.tagVM?.tags[path.row]
+                }
                 subTagTVC.title = category?.type
-                subTagTVC.searchTerm = (category?.type!)!
+                subTagTVC.searchTerm = category?.type
                 
             }
         }
