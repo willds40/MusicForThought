@@ -3,10 +3,13 @@ import UIKit
 class DescriptionTVC: UITableViewController {
     let descriptionVM = DescriptionVM()
     var searchTermBySongId:Double?
-    var song:Song?
+    var song:Song?{
+        didSet{
+        descriptionVM.addSong(song!)
+        }
+    }
     
     override func viewDidLoad() {
-        descriptionVM.addSong(song!)
         super.viewDidLoad()
     }
     

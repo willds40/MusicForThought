@@ -22,11 +22,11 @@ class SubTagTVCSpec: QuickSpec{
                     }
                 }
             }
-            describe ("searchTerm of SubtagCVC"){
+            describe ("segue"){
                 let subTagTVC = SubTagTVC()
                 let genre = Genre("Rap")
                 subTagTVC.genre = genre
-                it("should be the same as genre of SubTssgTVC"){
+                it("SongCVC genre should be the same as genre of SubTssgTVC"){
                      let songCVC = SongCVC()
                     subTagTVC.prepare(for: UIStoryboardSegue.init(identifier: "SongSegue", source: subTagTVC, destination: songCVC), sender: subTagTVC)
                     expect(songCVC.searchTerm).to(equal("Rap"))

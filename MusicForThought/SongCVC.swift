@@ -4,6 +4,7 @@ import UIKit
 
 class SongCVC: UICollectionViewController {
     var songVM:SongsVM?
+    var song:Song?
     var searchTerm:String?{
         didSet{
             songVM?.searchTermByGenre = searchTerm!
@@ -51,10 +52,12 @@ class SongCVC: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let song   = songVM?.songs[selectedRow]
+        if selectedRow != 0 {
+            song   = self.songVM?.songs[self.selectedRow]
+        }
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
-                descriptionTVC.song = song!
+                descriptionTVC.song = song
             }
         }
     }

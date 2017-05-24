@@ -28,10 +28,10 @@ class TagTVCSpec: QuickSpec{
                     }
                 }
             }
-            describe ("searchTerm of SubtagTVC"){
+            describe ("segue"){
             let tagTVC = TagTVC()
                 tagTVC.category = Category(type:"Artist")
-                it("should be the same as category of TagTVC"){
+                it("SubTagTVC category should be the same as category of TagTVC"){
                 let subTagTVC = SubTagTVC()
                 tagTVC.prepare(for: UIStoryboardSegue.init(identifier: "SubTagSegue", source: tagTVC, destination: subTagTVC), sender: tagTVC)
                     expect(subTagTVC.searchTerm).to(equal("Artist"))
