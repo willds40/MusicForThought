@@ -48,7 +48,6 @@
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
 		E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E81EC4D6F7006DE56D /* SongLibrary.swift */; };
 		E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894EC1EC501D7006DE56D /* ToDo.swift */; };
-		E8AA05701ECF7FB6004FD192 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */; };
 		E8AA05731ECF80EE004FD192 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05721ECF80EE004FD192 /* Genres.swift */; };
 		E8AA05751ECF8C3A004FD192 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05741ECF8C3A004FD192 /* Category.swift */; };
 		E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F5071ECE231E00CC1C8C /* Song.swift */; };
@@ -139,7 +138,6 @@
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
 		E80894E81EC4D6F7006DE56D /* SongLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongLibrary.swift; path = MusicForThought/SongLibrary.swift; sourceTree = "<group>"; };
 		E80894EC1EC501D7006DE56D /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E8AA05721ECF80EE004FD192 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		E8AA05741ECF8C3A004FD192 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E8C6F5071ECE231E00CC1C8C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 				E80894B71EC0C4CF006DE56D /* CategoriesLibrary.swift */,
 				E80894BD1EC203CD006DE56D /* GenresLibrary.swift */,
 				E80894E81EC4D6F7006DE56D /* SongLibrary.swift */,
-				E8AA056F1ECF7FB6004FD192 /* JSONParser.swift */,
 			);
 			name = Data;
 			path = ..;
@@ -526,7 +523,6 @@
 			files = (
 				E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */,
 				E80894D01EC36694006DE56D /* DescriptionTVC.swift in Sources */,
-				E8AA05701ECF7FB6004FD192 /* JSONParser.swift in Sources */,
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
 				E80894B81EC0C4CF006DE56D /* CategoriesLibrary.swift in Sources */,
 				E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */,

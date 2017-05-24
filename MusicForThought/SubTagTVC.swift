@@ -2,12 +2,15 @@ import UIKit
 
 class SubTagTVC: UITableViewController {
     var subTagVM:SubTagVM?
-    var searchTerm:String?
+    var searchTerm:String?{
+        didSet{
+            subTagVM = SubTagVM()
+            subTagVM?.searchTermByCategory = searchTerm
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subTagVM = SubTagVM()
-        subTagVM?.searchTermByCategory = searchTerm
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

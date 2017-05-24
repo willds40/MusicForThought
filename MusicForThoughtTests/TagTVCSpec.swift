@@ -10,6 +10,7 @@ class TagTVCSpec: QuickSpec{
                 let storyboard = UIStoryboard(name:"Main", bundle:nil)
                 tagTVC = storyboard.instantiateViewController(withIdentifier: "TagTVC") as! TagTVC
                 let _ = tagTVC.view
+                
             }
             it(" should be loaded and not be nil"){
                 expect(tagTVC.view).toNot(beNil())
@@ -21,18 +22,19 @@ class TagTVCSpec: QuickSpec{
             }
             describe("number of rows in the section"){
                 context("when there is one section"){
+                    let tagVM = TagVM()
                     it("should equal the count of the tags array in tags vm"){
-                        let tagVM = TagVM()
                         expect(tagTVC.tableView(tagTVC.view as! UITableView, numberOfRowsInSection: 1)).to(equal(tagVM.tags.count))
                     }
                 }
             }
-            describe ("searchTerm of SubtagTVC"){
-            let subTagTVC = SubTagTVC()
+            fdescribe ("searchTerm of SubtagTVC"){
+            let tagTVC = TagTVC()
+                tagTVC.category = Category(type:"Artist")
                 it("should be the same as category of TagTVC"){
-                tagTVC.category = Category(type: "Artist")
+                let subTagTVC = SubTagTVC()
                 tagTVC.prepare(for: UIStoryboardSegue.init(identifier: "SubTagSegue", source: tagTVC, destination: subTagTVC), sender: tagTVC)
-                expect(subTagTVC.searchTerm).to(equal("Artist"))
+                    expect(subTagTVC.searchTerm).to(equal("Artist"))
                 }
             }
             
