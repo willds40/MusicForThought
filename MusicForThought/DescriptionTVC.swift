@@ -3,9 +3,11 @@ import UIKit
 class DescriptionTVC: UITableViewController {
     let descriptionVM = DescriptionVM()
     var searchTermBySongId:Double?
+    var songsToGetDescriptionsOf = 0
     var song:Song?{
         didSet{
         descriptionVM.addSong(song!)
+        songsToGetDescriptionsOf += 1
         }
     }
     
@@ -18,14 +20,14 @@ class DescriptionTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return songsToGetDescriptionsOf
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return descriptionVM.sectionHeaders[section]
     }
     
-    
+
     private struct Storyboard{
         static let TagCellIndetifier = "DescriptionCell"
     }
