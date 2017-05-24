@@ -4,13 +4,16 @@ import UIKit
 
 class SongCVC: UICollectionViewController {
     var songVM:SongsVM?
-    var searchTerm = ""
+    var searchTerm:String?{
+        didSet{
+            songVM?.searchTermByGenre = searchTerm!
+        }
+    }
     var selectedRow = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         songVM = SongsVM()
-        songVM?.searchTermByGenre = searchTerm
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         collectionView?.isUserInteractionEnabled = true

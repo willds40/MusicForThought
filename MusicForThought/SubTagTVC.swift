@@ -2,6 +2,7 @@ import UIKit
 
 class SubTagTVC: UITableViewController {
     var subTagVM:SubTagVM?
+    var genre:Genre?
     var searchTerm:String?{
         didSet{
             subTagVM = SubTagVM()
@@ -35,10 +36,12 @@ class SubTagTVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SongSegue" {
             if let songCVC = segue.destination as? SongCVC {
+                if self.tableView.indexPathForSelectedRow != nil{
                 let path = self.tableView.indexPathForSelectedRow!
-                let genre = subTagVM?.genres?[path.row]
+                    genre = subTagVM?.genres?[path.row]
+                }
                 songCVC.title = genre?.type
-                songCVC.searchTerm = (genre?.type!)!
+                songCVC.searchTerm = genre?.type 
             }
         }
     }

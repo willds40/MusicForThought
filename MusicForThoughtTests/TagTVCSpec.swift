@@ -28,7 +28,7 @@ class TagTVCSpec: QuickSpec{
                     }
                 }
             }
-            fdescribe ("searchTerm of SubtagTVC"){
+            describe ("searchTerm of SubtagTVC"){
             let tagTVC = TagTVC()
                 tagTVC.category = Category(type:"Artist")
                 it("should be the same as category of TagTVC"){

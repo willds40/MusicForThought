@@ -4,7 +4,7 @@ import Nimble
 
 class TagSpec: QuickSpec{
     override func spec() {
-        let tagVM = TagVM()
+        _ = TagVM()
         describe ("TagVM"){
             it("should have an array with three tags in it: Artist, Album and Genre"){
                
