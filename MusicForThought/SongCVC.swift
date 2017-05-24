@@ -3,18 +3,18 @@
 import UIKit
 
 class SongCVC: UICollectionViewController {
-    var songVM:SongsVM?
+    var songListIsEmpty = 0
     var song:Song?
+    var songVM = SongsVM()
+    var selectedRow = 0
     var searchTerm:String?{
         didSet{
-            songVM?.searchTermByGenre = searchTerm!
+            songVM.searchTermByGenre = searchTerm!
         }
     }
-    var selectedRow = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        songVM = SongsVM()
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         collectionView?.isUserInteractionEnabled = true
@@ -28,17 +28,17 @@ class SongCVC: UICollectionViewController {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (songVM?.songs.count)!
+        return (songVM.songs.count)
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let borderColor: CGColor! = UIColor.black.cgColor
         let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
-        for: indexPath) as! SongCell
+                                                      for: indexPath) as! SongCell
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
-        let song   = songVM?.songs[indexPath.row]
-        cell.songTitleLabel.text = song?.songTitle
+        let song   = songVM.songs[indexPath.row]
+        cell.songTitleLabel.text = song.songTitle
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
         cell.image.layer.borderWidth = borderWidth
@@ -52,9 +52,10 @@ class SongCVC: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if selectedRow != 0 {
-            song   = self.songVM?.songs[self.selectedRow]
+        if songVM.songs.count != songListIsEmpty {
+            song   = songVM.songs[selectedRow]
         }
+        
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
                 descriptionTVC.song = song
