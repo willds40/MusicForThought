@@ -55,14 +55,11 @@ class SongCVC: UICollectionViewController {
         if songVM.songs.count != songListIsEmpty {
             song   = songVM.songs[selectedRow]
         }
-        
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
                 descriptionTVC.song = song
             }
         }
-    }
-    
-    func mockSearchTermByGenre(searchTerm:String)->String{return ""}
+    }    
 }
 

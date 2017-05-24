@@ -43,13 +43,12 @@
 		E80894DA1EC36DDE006DE56D /* CHMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = E80894D91EC36DDE006DE56D /* CHMusic.png */; };
 		E80894DB1EC3701F006DE56D /* CHMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = E80894D91EC36DDE006DE56D /* CHMusic.png */; };
 		E80894DD1EC3793D006DE56D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DC1EC3793D006DE56D /* API.swift */; };
-		E80894DF1EC4A273006DE56D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DE1EC4A273006DE56D /* Dictionary.swift */; };
-		E80894E21EC4A8D3006DE56D /* DictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */; };
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
 		E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E81EC4D6F7006DE56D /* SongLibrary.swift */; };
 		E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894EC1EC501D7006DE56D /* ToDo.swift */; };
 		E8AA05731ECF80EE004FD192 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05721ECF80EE004FD192 /* Genres.swift */; };
 		E8AA05751ECF8C3A004FD192 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05741ECF8C3A004FD192 /* Category.swift */; };
+		E8AA05781ED621F6004FD192 /* VCExetensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA05771ED621F6004FD192 /* VCExetensions.swift */; };
 		E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F5071ECE231E00CC1C8C /* Song.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,13 +132,12 @@
 		E80894D71EC36AF0006DE56D /* DescriptionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionSpec.swift; sourceTree = "<group>"; };
 		E80894D91EC36DDE006DE56D /* CHMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHMusic.png; sourceTree = "<group>"; };
 		E80894DC1EC3793D006DE56D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		E80894DE1EC4A273006DE56D /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySpec.swift; sourceTree = "<group>"; };
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
 		E80894E81EC4D6F7006DE56D /* SongLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongLibrary.swift; path = MusicForThought/SongLibrary.swift; sourceTree = "<group>"; };
 		E80894EC1EC501D7006DE56D /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		E8AA05721ECF80EE004FD192 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		E8AA05741ECF8C3A004FD192 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E8AA05771ED621F6004FD192 /* VCExetensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExetensions.swift; sourceTree = "<group>"; };
 		E8C6F5071ECE231E00CC1C8C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,8 +195,8 @@
 		E80894561EBCD185006DE56D /* MusicForThought */ = {
 			isa = PBXGroup;
 			children = (
+				E8AA05761ED621BC004FD192 /* Extensions */,
 				E8AA05711ECF8045004FD192 /* Model */,
-				E80894E01EC4A27A006DE56D /* Extensions */,
 				E8AA056E1ECF7F12004FD192 /* Data */,
 				E808949A1EBCDFD8006DE56D /* APIS */,
 				E80894991EBCDFD0006DE56D /* Adapters */,
@@ -216,7 +214,6 @@
 				E80894E41EC4A8EB006DE56D /* API */,
 				E80894A21EBD012F006DE56D /* ViewModel */,
 				E80894A11EBD011C006DE56D /* VIewControllers */,
-				E80894E31EC4A8E0006DE56D /* Extensions */,
 			);
 			path = MusicForThoughtTests;
 			sourceTree = "<group>";
@@ -325,23 +322,6 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
-		E80894E01EC4A27A006DE56D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E80894DE1EC4A273006DE56D /* Dictionary.swift */,
-			);
-			name = Extensions;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		E80894E31EC4A8E0006DE56D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E80894E11EC4A8D3006DE56D /* DictionarySpec.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		E80894E41EC4A8EB006DE56D /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +356,14 @@
 				E8AA05741ECF8C3A004FD192 /* Category.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E8AA05761ED621BC004FD192 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8AA05771ED621F6004FD192 /* VCExetensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +511,7 @@
 			files = (
 				E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */,
 				E80894D01EC36694006DE56D /* DescriptionTVC.swift in Sources */,
+				E8AA05781ED621F6004FD192 /* VCExetensions.swift in Sources */,
 				E808949E1EBCE0E0006DE56D /* SubTagTVC.swift in Sources */,
 				E80894B81EC0C4CF006DE56D /* CategoriesLibrary.swift in Sources */,
 				E80894C01EC220C9006DE56D /* SongCVC.swift in Sources */,
@@ -534,7 +523,6 @@
 				E80894D21EC36731006DE56D /* DescriptionVM.swift in Sources */,
 				E80894A01EBCE0F9006DE56D /* TagTVC.swift in Sources */,
 				E80894581EBCD185006DE56D /* AppDelegate.swift in Sources */,
-				E80894DF1EC4A273006DE56D /* Dictionary.swift in Sources */,
 				E80894CA1EC2382C006DE56D /* SongCell.swift in Sources */,
 				E8C6F5081ECE231E00CC1C8C /* Song.swift in Sources */,
 				E8AA05751ECF8C3A004FD192 /* Category.swift in Sources */,
@@ -551,7 +539,6 @@
 				E80894D41EC368A9006DE56D /* DescriptionTVCSpec.swift in Sources */,
 				E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */,
 				E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */,
-				E80894E21EC4A8D3006DE56D /* DictionarySpec.swift in Sources */,
 				E80894AC1EBD0E8B006DE56D /* SubTagSpec.swift in Sources */,
 				E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */,
 				E80894A61EBD017F006DE56D /* TagSpec.swift in Sources */,

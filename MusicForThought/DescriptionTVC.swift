@@ -27,7 +27,6 @@ class DescriptionTVC: UITableViewController {
         return descriptionVM.sectionHeaders[section]
     }
     
-
     private struct Storyboard{
         static let TagCellIndetifier = "DescriptionCell"
     }
@@ -38,6 +37,4 @@ class DescriptionTVC: UITableViewController {
         cell.textLabel?.text = song.description
         return cell
     }
-
-    func mockSearchTermBySongID(searchTerm:Double)->Double{return 0.0}
 }

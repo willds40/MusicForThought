@@ -45,6 +45,4 @@ class SubTagTVC: UITableViewController {
             }
         }
     }
-    
-    func mockSetSearchTermByCategory(searchTerm:String)->String{return ""}
 }
