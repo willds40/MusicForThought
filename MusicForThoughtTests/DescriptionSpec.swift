@@ -20,6 +20,12 @@ class DescriptionSpec: QuickSpec{
                     expect(result).to(equal(22.0))
                 }
             }
+            describe("section headers"){
+                let descriptionVM = DescriptionVM()
+                it("should be an array with four elements"){
+                expect(descriptionVM.sectionHeaders.count).to(equal(4))
+                }
+            }
         }
     }
 }
