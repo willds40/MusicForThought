@@ -4,10 +4,13 @@ import Nimble
 
 class DescriptionSpec: QuickSpec{
     override func spec() {
+        var descriptionVM:DescriptionVM!
+        beforeEach {
+         descriptionVM =  DescriptionVM()
+        }
         describe("DescriptionVM"){
             class mockDescriptionTVC:DescriptionTVC{
                 override func mockSearchTermBySongID(searchTerm:Double)->Double{
-                    let descriptionVM = DescriptionVM()
                     descriptionVM.searchTermBySongID = searchTerm
                     return descriptionVM.searchTermBySongID!
                 }
@@ -21,7 +24,6 @@ class DescriptionSpec: QuickSpec{
                 }
             }
             describe("section headers"){
-                let descriptionVM = DescriptionVM()
                 it("should be an array with four elements"){
                 expect(descriptionVM.sectionHeaders.count).to(equal(4))
                 }

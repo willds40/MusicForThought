@@ -8,9 +8,9 @@ class API{
         if endpoint != nil {
             url = endpoint
         } else if (endPontID != nil) && endPointID2 != nil {
-            url = String(describing: endPontID) + String(describing: endPointID2)
+            url = String(describing: endPontID!) + "+" + String(describing: endPointID2!)
         }else{
-            url = String(describing: endPontID)
+            url = String(describing: endPontID!)
         }
         Alamofire.request(url!)
             .responseJSON { response in
