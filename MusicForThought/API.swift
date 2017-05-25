@@ -2,8 +2,8 @@ import Alamofire
 import Foundation
 
 class API{
+    var url:String?
     func searchReguest(endpoint:String?, endPontID:Double?, endPointID2: Double?){
-        var url:String?
         //how to refactor
         if endpoint != nil {
             url = endpoint
