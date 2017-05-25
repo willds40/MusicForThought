@@ -22,7 +22,15 @@ class AdapterSpec: QuickSpec{
                 
                 }
             }
+            context("when search term equals Rap"){
+                it("should equal the number of songs in the library that are rap"){
+                    let searchAdapter = SearchAdapter()
+                let rapSongs = searchAdapter.searchSongsByGenre("Rap")
+                expect(rapSongs.count).to(equal(2))
+                }
+            }
         }
+        
     }
 }
 
