@@ -4,10 +4,11 @@ import Nimble
 
 class TagSpec: QuickSpec{
     override func spec() {
-        _ = TagVM()
+        let tagVM = TagVM()
         describe ("TagVM"){
-            it("should have an array with three tags in it: Artist, Album and Genre"){
-               
+            let categories = CategoriesLibrary()
+            it("should have an array with the same amount as in the catories library"){
+                expect(tagVM.tags.count).to(equal(categories.getCatLib().count))
             }
         }
     }
