@@ -1,10 +1,21 @@
 import Foundation
+import SwiftyJSON
 
 class SearchAdapter {
     var api = API()
     var result:[String:String]!
     var songLib = SongLibrary()
     var genreLib = GenresLibrary()
+    
+    func createCategories() -> [Category]? {
+    var categories: [Category] = []
+    let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "CategoriesData"))
+    for (_, title) in jsonObj! {
+    categories.append(Category(type: String(describing: title)))
+    }
+    return categories
+    }
+   
     
     func searchMusicByCategory(_ searchTerm:String) ->[Genre]{
         api.searchReguest(endpoint: searchTerm, endPontID: nil, endPointID2: nil)

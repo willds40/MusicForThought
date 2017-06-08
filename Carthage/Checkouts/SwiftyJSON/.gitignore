@@ -1,8 +1,6 @@
-### OSX ###
+# Xcode
 .DS_Store
-#### iOS ####
-Pods/
-build/
+*/build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -12,9 +10,15 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
-*.xccheckout
+profile
 *.moved-aside
 DerivedData
-*.xcuserstate
-xcshareddata/
+.idea/
+*.hmap
+*.xccheckout
 
+#CocoaPods
+Pods
+
+#Carthage
+Carthage/Build

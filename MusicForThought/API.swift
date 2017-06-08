@@ -1,8 +1,24 @@
 import Alamofire
 import Foundation
+import SwiftyJSON
 
 class API{
     var url:String?
+    func retrieveData(forPath path: String) -> JSON? {
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+            let jsonObj = JSON(data: data as Data)
+            return jsonObj
+        } catch {
+            print("unable to parse JSON file")
+        }
+        return nil
+    }
+    
+    func findJSONfilePath(forPath : String) -> String {
+        return Bundle.main.path(forResource: forPath, ofType: "JSON")!
+    }
+    
     func searchReguest(endpoint:String?, endPontID:Double?, endPointID2: Double?){
         //how to refactor
         if endpoint != nil {
