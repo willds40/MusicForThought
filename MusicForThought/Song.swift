@@ -1,15 +1,13 @@
 import Foundation
 class Song {
     let songTitle:String?
-    let id:Double?
+    let id:String?
     let description: String?
     let coverArt:String?
-    let genre:String?
-    init(songTitle:String, id:Double, description:String, coverArt:String, genre:String ) {
+    init(songTitle:String, id:String, description:String, coverArt:String) {
         self.songTitle = songTitle
         self.id = id
         self.description = description
         self.coverArt = coverArt
-        self.genre = genre
     }
 }

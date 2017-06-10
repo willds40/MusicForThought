@@ -4,49 +4,46 @@ import SwiftyJSON
 class SearchAdapter {
     var api = API()
     var result:[String:String]!
-    var songLib = SongLibrary()
-    var genreLib = GenresLibrary()
     
-    func createCategories() -> [Category]? {
-    var categories: [Category] = []
-    let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "CategoriesData"))
-    for (_, title) in jsonObj! {
-    categories.append(Category(type: String(describing: title)))
-    }
-    return categories
-    }
-   
-    
-    func searchMusicByCategory(_ searchTerm:String) ->[Genre]{
-        api.searchReguest(endpoint: searchTerm, endPontID: nil, endPointID2: nil)
-    let fetchedGenreLib = genreLib.getGenreLib()
-        return fetchedGenreLib
+    func searchCategories() -> [Category]? {
+        var categories: [Category] = []
+        let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "CategoriesData"))
+        for (_, title) in jsonObj! {
+            categories.append(Category(type: String(describing: title),genreIDs:["1","2"]))
+        }
+        _ = api.dummySearchRequestIfAPIExisted(forPath: "/api/1/tags")
+        return categories
     }
     
-    func searchSongsByGenre(_ searchTerm:String)->[Song]{
-        api.searchReguest(endpoint: searchTerm, endPontID: nil, endPointID2: nil)
-        let fetchedSongLib = songLib.getSongLib(song: nil)
-        if searchTerm != "Search All Genre"{
-            var fetchedSongs = [Song]()
-            for song in fetchedSongLib{
-                if (searchTerm == song.genre){
-                    fetchedSongs.append(song)
-                }
+    func searchGenres(genreID:[String]) -> [Genre]? {
+        var genres: [Genre] = []
+        let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "GenreData"))
+        for (id, info) in jsonObj! {
+            genres.append(Genre(String(describing: info["name"]), id: id, songIDs: addSongs(forID: info["songs"])!))
+        }
+        _ = api.dummySearchRequestIfAPIExisted(forPath: "/api/1/category/agt/{" + "\(genreID)" + "}")
+        return genres
+    }
+    
+    private func addSongs(forID songs: JSON) -> [Int]? {
+        var songList = [Int]()
+        for (_, song) in songs {
+            songList.append(Int(String(describing: song))!)
+        }
+        return songList
+    }
+    
+    func createSongs(_ songsAssociatedWithTheGenre:[Int]) -> [Song]? {
+        var songs: [Song] = []
+        let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "SongData"))
+        for (id, info) in jsonObj! {
+            if songsAssociatedWithTheGenre.contains(Int(id)!){
+                songs.append(Song(songTitle: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverArt: String(describing: info["coverArt"])))
             }
-            return fetchedSongs
-        } else
-        {
-            return fetchedSongLib
         }
+        let songIdsAsStrings = songsAssociatedWithTheGenre.map
+            {String($0)}
+        _ = api.dummySearchRequestIfAPIExisted(forPath: String( "/api/1/song/multi?id=" + songIdsAsStrings.joined(separator: "&id=")))
+        return songs
     }
-    
-    func searchSongById(ID:Double, ID2:Double?)->[Song]{
-        if ID2 == nil {
-            api.searchReguest(endpoint: nil, endPontID: ID, endPointID2: nil)
-        } else {
-            api.searchReguest(endpoint: nil, endPontID: ID, endPointID2: ID2)
-        }
-        let fetchedSongLib = songLib.getSongLib(song: nil)
-        return fetchedSongLib
-}
 }

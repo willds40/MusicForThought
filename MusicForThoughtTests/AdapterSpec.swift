@@ -4,31 +4,31 @@ import Nimble
 
 class AdapterSpec: QuickSpec{
     override func spec() {
-        var searchAdapter:SearchAdapter!
-        describe("search tern by categoruy"){
-            beforeEach {
-                searchAdapter = SearchAdapter()
-            }
-            it("return value should equal amount in the genre lub"){
-                let genreLib = GenresLibrary()
-                let result = searchAdapter.searchMusicByCategory("testSong")
-                expect(result.count).to(equal(genreLib.getGenreLib().count))
+        var searchAdapter:SearchAdapter?
+        beforeEach {
+             searchAdapter = SearchAdapter()
+        }
+        describe("Search Categories Method"){
+            it("should return the number of cateogies "){
+                let categorysIds = ["1","2", "3"]
+                let categories = searchAdapter?.searchCategories()
+                expect(categories?.count).to(equal(categorysIds.count))
             }
         }
-        describe("search song by genre"){
-            context("when search term equals search by all genres"){
-                it("should return a value equal to the number in the song lib"){
-                let songLib = SongLibrary()
-                let result = searchAdapter.searchSongsByGenre("Search All Genre")
-                    expect(result.count).to(equal(songLib.getSongLib(song: nil).count))
-                
+        describe("Search Genres"){
+            context("when there are two genres"){
+            it("should return the number of ids associated with that genre"){
+            let genres = searchAdapter?.searchGenres(genreID: ["1", "2"])
+                expect(genres?.count).to(equal(2))
                 }
+            
             }
-            context("when search term equals Rap"){
-                it("should equal the number of songs in the library that are rap"){
-                    let searchAdapter = SearchAdapter()
-                let rapSongs = searchAdapter.searchSongsByGenre("Rap")
-                expect(rapSongs.count).to(equal(2))
+        }
+        describe("Search Songs"){
+            context("When there are two songs associated with the rap genre"){
+                it("should return two songs"){
+             let songs =   searchAdapter?.createSongs([1,2])
+                expect(songs?.count).to(equal(2))
                 }
             }
         }

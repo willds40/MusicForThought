@@ -6,18 +6,18 @@ class SongSpec: QuickSpec{
     override func spec() {
         describe("songVM"){
             class mockSongCVC:SongCVC{
-                override func mockSearchTermByGenre(searchTerm:String)->String{
+                override func mockSongsAssociatedByGenre(songsAssocaitedByGenre:[Int])->[Int]{
                     let songVM = SongsVM()
-                    songVM.searchTermByGenre = searchTerm
-                    return songVM.searchTermByGenre
+                    songVM.songsAsscoaitedWithTheGenre = songsAssocaitedByGenre
+                    return songVM.songsAsscoaitedWithTheGenre
                 }
             }
-            context("search in TVC is equal to Rock"){
+            context("search in TVv is equals to the songs associated with Rock"){
                 it("search term should be equal to Rock"){
                     let myClassInstance = mockSongCVC()
-                    let searchTerm = "Rock"
-                    let result = myClassInstance.mockSearchTermByGenre(searchTerm: searchTerm)
-                    expect(result).to(equal("Rock"))
+                    let songIDS = [3,4]
+                    let result = myClassInstance.mockSongsAssociatedByGenre(songsAssocaitedByGenre: songIDS)
+                    expect(result).to(contain([3,4]))
                 }
             }
         }

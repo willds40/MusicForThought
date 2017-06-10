@@ -3,11 +3,14 @@ import UIKit
 class SubTagTVC: UITableViewController {
     var subTagVM:SubTagVM?
     var genre:Genre?
-    var searchTerm:String?{
+    var genreID:[String]?{
         didSet{
-            subTagVM = SubTagVM()
-            subTagVM?.searchTermByCategory = searchTerm
+            createGenres()
         }
+    }
+    func createGenres(){
+        subTagVM = SubTagVM()
+        subTagVM?.genreId = genreID
     }
     
     override func viewDidLoad() {
@@ -19,7 +22,7 @@ class SubTagTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (subTagVM?.genres!.count)!
+        return ((subTagVM?.genres.count))!
     }
     
     private struct Storyboard{
@@ -28,8 +31,8 @@ class SubTagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        let genre = subTagVM?.genres?[indexPath.row]
-        cell.textLabel?.text = genre?.type
+        let genre = subTagVM?.genres[indexPath.row]
+        cell.textLabel?.text = genre?.name
         return cell
     }
     
@@ -38,10 +41,12 @@ class SubTagTVC: UITableViewController {
             if let songCVC = segue.destination as? SongCVC {
                 if self.tableView.indexPathForSelectedRow != nil{
                 let path = self.tableView.indexPathForSelectedRow!
-                    genre = subTagVM?.genres?[path.row]
+                    genre = subTagVM?.genres[path.row]
                 }
-                songCVC.title = genre?.type
-                songCVC.searchTerm = genre?.type 
+                songCVC.title = genre?.name
+                if genre?.songIDs?.count != nil {
+                    songCVC.songsAssociatedWithGenre = (genre?.songIDs)!
+                }
             }
         }
     }

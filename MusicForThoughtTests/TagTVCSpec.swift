@@ -28,18 +28,7 @@ class TagTVCSpec: QuickSpec{
                     }
                 }
             }
-            describe ("segue"){
-            let tagTVC = TagTVC()
-                tagTVC.category = Category(type:"Artist")
-                it("SubTagTVC category should be the same as category of TagTVC"){
-                let subTagTVC = SubTagTVC()
-                tagTVC.prepare(for: UIStoryboardSegue.init(identifier: "SubTagSegue", source: tagTVC, destination: subTagTVC), sender: tagTVC)
-                    expect(subTagTVC.searchTerm).to(equal("Artist"))
-                }
-            }
-            
-        }
-    }
+        }    }
 }
 
 

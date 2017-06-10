@@ -7,12 +7,11 @@ class SongCVC: UICollectionViewController {
     var song:Song?
     var songVM = SongsVM()
     var selectedRow = 0
-    var searchTerm:String?{
-        didSet{
-            songVM.searchTermByGenre = searchTerm!
+    var songsAssociatedWithGenre = [Int](){
+        didSet {
+        songVM.songsAsscoaitedWithTheGenre = songsAssociatedWithGenre
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.delegate = self

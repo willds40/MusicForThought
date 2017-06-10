@@ -41,8 +41,7 @@ class TagTVC: UITableViewController {
                     category = self.tagVM?.tags[path.row]
                 }
                 subTagTVC.title = category?.type
-                subTagTVC.searchTerm = category?.type
-                
+                subTagTVC.genreID = category?.genreIDs
             }
         }
     }

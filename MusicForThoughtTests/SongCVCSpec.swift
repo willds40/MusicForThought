@@ -16,7 +16,7 @@ class SongCVCCSpec: QuickSpec{
             }
             describe ("segue"){
                 let songCVC = SongCVC()
-                let song = Song(songTitle: "Test", id: 2.0, description: "Test", coverArt: "Test", genre: "Test")
+                let song = Song(songTitle: "Test", id: "2.0", description: "Test", coverArt: "Test")
                 songCVC.song = song
                 it("song of the destinationTVC should be the same as SongCVC"){
                     let descriptionTVC = DescriptionTVC()

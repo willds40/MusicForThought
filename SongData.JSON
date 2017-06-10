@@ -1,22 +1,22 @@
-`{
+{
     "1": {
         "name": "Encore",
         "description": "Do You Want More",
-        "coverURL": "www.IOwnBrooklyn.com"
+        "coverArt": "www.IOwnBrooklyn.com"
     },
     "2": {
         "name": "Kayne's Workout Plan",
         "description": "Get Fit On Kayne's plan",
-        "coverURL": "www.IAmNotCrazyJustAGenius.com"
+        "coverArt": "www.IAmNotCrazyJustAGenius.com"
     },
     "3": {
         "name": "help",
         "description": "I Need Someone",
-        "coverURL": "www.BeatlesForever.com"
+        "coverArt": "www.BeatlesForever.com"
     },
     "4": {
         "name": "Imagine",
         "description": "World Peace",
-        "coverURL": "www,IAmStillAlive.com"
+        "coverArt": "www,IAmStillAlive.com"
     }
 }

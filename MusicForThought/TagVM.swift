@@ -2,5 +2,5 @@ import UIKit
 import Foundation
 
 class TagVM{
-    var tags: [Category] = SearchAdapter().createCategories()!
+    var tags: [Category] = SearchAdapter().searchCategories()!
 }

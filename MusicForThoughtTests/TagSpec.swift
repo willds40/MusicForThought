@@ -8,7 +8,7 @@ class TagSpec: QuickSpec{
         describe ("TagVM"){
             let serchAdapter = SearchAdapter()
             it("should have an array with the same amount as retrieved from the Search Adapter"){
-                expect(tagVM.tags.count).to(equal(serchAdapter.createCategories()?.count))
+            expect(tagVM.tags.count).to(equal(serchAdapter.searchCategories()?.count))
             }
         }
     }

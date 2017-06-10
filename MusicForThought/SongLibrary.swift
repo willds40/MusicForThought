@@ -1,13 +1,16 @@
 class SongLibrary{
     var songLib = [Song]()
-    var encore = Song(songTitle: "Encore", id: 1, description: "Do You Want More", coverArt: "www.IOwnBrooklyn.com", genre:"Rap")
+    var encore = Song(songTitle: "Encore", id: "1", description: "Do You Want More", coverArt: "www.IOwnBrooklyn.com")
     
-    var workoutPlan = Song(songTitle: "Kayne's Workout Plan", id: 2.0, description: "Get Fit On Kayne's plan", coverArt: "www.IAmNotCrazyJustAGenius.com",genre:"Rap")
+    var workoutPlan = Song(songTitle: "Kayne's Workout Plan", id: "2.0", description: "Get Fit On Kayne's plan", coverArt: "www.IAmNotCrazyJustAGenius.com")
     
-    var help = Song(songTitle: "help", id: 3.0, description: "I Need Someone", coverArt: "www.BeatlesForever.com", genre:"Rock")
+    var help = Song(songTitle: "help", id: "3.0", description: "I Need Someone", coverArt: "www.BeatlesForever.com" )
     
-    var imagine = Song(songTitle: "Imagine", id: 4.0, description: "World Peace", coverArt: "www,IAmStillAlive.com",genre:"Rock")
+    var imagine = Song(songTitle: "Imagine", id: "4.0", description: "World Peace", coverArt:"I am still Alive")
     
+}
+
+/*
     func getSongLib(song:Song?)->[Song]{
         if song != nil{
             songLib.append(song!)
@@ -19,5 +22,5 @@ class SongLibrary{
         return songLib
     }
 }
-
+*/
 

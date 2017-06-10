@@ -2,10 +2,11 @@ import Foundation
 
 class SubTagVM{
     var searchAdapter = SearchAdapter()
-    var genres: [Genre]?
-    var searchTermByCategory:String?{
-        didSet{
-            genres = searchAdapter.searchMusicByCategory(searchTermByCategory!)
+    var genres = [Genre]()
+    var genreId:[String]?
+        {didSet{
+            genres = searchAdapter.searchGenres(genreID: genreId!)!
         }
     }
+
 }
