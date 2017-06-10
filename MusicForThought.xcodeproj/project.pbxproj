@@ -43,7 +43,6 @@
 		E80894DD1EC3793D006DE56D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DC1EC3793D006DE56D /* API.swift */; };
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
 		E80894E91EC4D6F7006DE56D /* SongLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E81EC4D6F7006DE56D /* SongLibrary.swift */; };
-		E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894EC1EC501D7006DE56D /* ToDo.swift */; };
 		E8305E6C1EE86FF8008A5560 /* SongData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = E8305E6B1EE86FF8008A5560 /* SongData.JSON */; };
 		E8305E6E1EE87112008A5560 /* GenreData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = E8305E6D1EE87112008A5560 /* GenreData.JSON */; };
 		E8305E701EE87455008A5560 /* CategoriesData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = E8305E6F1EE87455008A5560 /* CategoriesData.JSON */; };
@@ -138,7 +137,6 @@
 		E80894DC1EC3793D006DE56D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
 		E80894E81EC4D6F7006DE56D /* SongLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongLibrary.swift; path = MusicForThought/SongLibrary.swift; sourceTree = "<group>"; };
-		E80894EC1EC501D7006DE56D /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		E8305E6B1EE86FF8008A5560 /* SongData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SongData.JSON; sourceTree = "<group>"; };
 		E8305E6D1EE87112008A5560 /* GenreData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GenreData.JSON; sourceTree = "<group>"; };
 		E8305E6F1EE87455008A5560 /* CategoriesData.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoriesData.JSON; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			children = (
 				E85007941EE9D05B00F68367 /* ToDo */,
 				E850078E1EE9ADBD00F68367 /* carthage.sh */,
-				E80894EC1EC501D7006DE56D /* ToDo.swift */,
 				E80894561EBCD185006DE56D /* MusicForThought */,
 				E808946B1EBCD185006DE56D /* MusicForThoughtTests */,
 				E80894761EBCD185006DE56D /* MusicForThoughtUITests */,
@@ -557,7 +554,6 @@
 				E80894D81EC36AF0006DE56D /* DescriptionSpec.swift in Sources */,
 				E80894D41EC368A9006DE56D /* DescriptionTVCSpec.swift in Sources */,
 				E80894BA1EC0C558006DE56D /* SubTagTVCSpec.swift in Sources */,
-				E80894ED1EC501D7006DE56D /* ToDo.swift in Sources */,
 				E80894AC1EBD0E8B006DE56D /* SubTagSpec.swift in Sources */,
 				E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */,
 				E8AA057A1ED728A4004FD192 /* ApiSpec.swift in Sources */,

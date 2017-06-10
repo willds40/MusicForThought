@@ -12,9 +12,12 @@ class SubTagSpec: QuickSpec{
             describe("Genres"){
                 context("when there are two genre ids"){
                     it("The genre count should be two"){
-                        subTagVM?.genreId = ["1,2"]
-                        expect(subTagVM?.genres.count).to(equal(2))
+                        subTagVM?.genreId = ["1,2","3"]
+                        expect(subTagVM?.genres.count).to(equal(3))
                     }
+                }
+                context("When TVC passes in Genres"){
+                
                 }
             }
         }

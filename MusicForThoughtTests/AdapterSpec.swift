@@ -18,8 +18,8 @@ class AdapterSpec: QuickSpec{
         describe("Search Genres"){
             context("when there are two genres"){
             it("should return the number of ids associated with that genre"){
-            let genres = searchAdapter?.searchGenres(genreID: ["1", "2"])
-                expect(genres?.count).to(equal(2))
+            let genres = searchAdapter?.searchGenres(genreID: ["1", "2", "3"])
+                expect(genres?.count).to(equal(3))
                 }
             
             }
@@ -32,7 +32,6 @@ class AdapterSpec: QuickSpec{
                 }
             }
         }
-        
     }
 }
 

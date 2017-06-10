@@ -12,8 +12,8 @@ class SongSpec: QuickSpec{
                     return songVM.songsAsscoaitedWithTheGenre
                 }
             }
-            context("search in TVv is equals to the songs associated with Rock"){
-                it("search term should be equal to Rock"){
+            context("ids in SongCVC is equals to the songs associated with Rock"){
+                it("songs ids hould be equal to the ids with Rock"){
                     let myClassInstance = mockSongCVC()
                     let songIDS = [3,4]
                     let result = myClassInstance.mockSongsAssociatedByGenre(songsAssocaitedByGenre: songIDS)

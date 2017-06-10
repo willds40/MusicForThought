@@ -1,3 +1,0 @@
-/*
- look at mocking of methods in vm
- */
