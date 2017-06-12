@@ -15,11 +15,6 @@ class DescriptionTVCSpec: QuickSpec{
             it(" should be loaded and not be nil"){
                 expect(descriptionTVC.view).toNot(beNil())
             }
-            describe("rows"){
-                it("should equal the number of songs"){
-                expect(descriptionTVC.tableView(descriptionTVC.view as! UITableView, numberOfRowsInSection: 4)).to(equal(descriptionTVC.songsAdded))
-                }
-            }
         }
     }
 }
