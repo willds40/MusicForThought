@@ -3,11 +3,9 @@ import UIKit
 class DescriptionTVC: UITableViewController {
     let descriptionVM = DescriptionVM()
     var searchTermBySongId:Double?
-    var songsToGetDescriptionsOf = 0
     var song:Song?{
         didSet{
         descriptionVM.addSong(song!)
-        songsToGetDescriptionsOf += 1
         }
     }
     
@@ -20,7 +18,7 @@ class DescriptionTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songsToGetDescriptionsOf
+        return descriptionVM.songsToGetDescriptionsOf
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
