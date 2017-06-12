@@ -5,6 +5,6 @@ class SongsVM{
     var songs = [Song]()
     var songsAsscoaitedWithTheGenre = [Int]()
         {didSet{
-            songs = searchAdapter.createSongs(songsAsscoaitedWithTheGenre)!}
+            songs = searchAdapter.searchSongs(songsAsscoaitedWithTheGenre)!}
     }
 }

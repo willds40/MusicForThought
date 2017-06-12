@@ -27,7 +27,7 @@ class AdapterSpec: QuickSpec{
         describe("Search Songs"){
             context("When there are two songs associated with the rap genre"){
                 it("should return two songs"){
-             let songs =   searchAdapter?.createSongs([1,2])
+             let songs =   searchAdapter?.searchSongs([1,2])
                 expect(songs?.count).to(equal(2))
                 }
             }
