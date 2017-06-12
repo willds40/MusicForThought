@@ -22,7 +22,7 @@ class SubTagTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ((subTagVM?.genres.count))!
+            return ((subTagVM?.genres.count))!
     }
     
     private struct Storyboard{
@@ -40,7 +40,7 @@ class SubTagTVC: UITableViewController {
         if segue.identifier == "SongSegue" {
             if let songCVC = segue.destination as? SongCVC {
                 if self.tableView.indexPathForSelectedRow != nil{
-                let path = self.tableView.indexPathForSelectedRow!
+                    let path = self.tableView.indexPathForSelectedRow!
                     genre = subTagVM?.genres[path.row]
                 }
                 songCVC.title = genre?.name

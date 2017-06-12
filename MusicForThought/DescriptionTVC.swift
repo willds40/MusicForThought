@@ -2,10 +2,11 @@ import UIKit
 
 class DescriptionTVC: UITableViewController {
     let descriptionVM = DescriptionVM()
-    var searchTermBySongId:Double?
+    var songsAdded = 0
     var song:Song?{
         didSet{
         descriptionVM.addSong(song!)
+        songsAdded += 1
         }
     }
     

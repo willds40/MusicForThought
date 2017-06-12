@@ -1,0 +1,4 @@
+1. How do you mock a "get request" from a JSON file or rather what were you expecting people to do?
+
+2. In my tvc tests, even if i call the view model before the tvc loads, the tvc reloads it when that part of the test runs. How do you go about testing the number of sections in each row? Is this necessary? Example of description tvc is a good example.
+

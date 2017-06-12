@@ -10,6 +10,7 @@ class SubTagTVCSpec: QuickSpec{
                 let storyboard = UIStoryboard(name:"Main", bundle:nil)
                 subTagTVC = storyboard.instantiateViewController(withIdentifier: "SubTagTVC") as! SubTagTVC
                 let _ = subTagTVC.view
+                subTagTVC.genreID = ["1", "2", "3"]
             }
             it(" should be loaded and not be nil"){
                 expect(subTagTVC.view).toNot(beNil())
@@ -22,6 +23,11 @@ class SubTagTVCSpec: QuickSpec{
                     let songCVC = SongCVC()
                     subTagTVC.prepare(for: UIStoryboardSegue.init(identifier: "SongSegue", source: subTagTVC, destination: songCVC), sender: subTagTVC)
                     expect(songCVC.songsAssociatedWithGenre).to(contain([1,2]))
+                }
+            }
+            describe("rows in section"){
+                it ("should equal the number of genres in genre view model"){
+                expect(subTagTVC.tableView(subTagTVC.view as! UITableView, numberOfRowsInSection: 1)).to(equal(subTagTVC.genreID?.count))
                 }
             }
         }

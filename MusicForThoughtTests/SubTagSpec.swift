@@ -16,9 +16,6 @@ class SubTagSpec: QuickSpec{
                         expect(subTagVM?.genres.count).to(equal(3))
                     }
                 }
-                context("When TVC passes in Genres"){
-                
-                }
             }
         }
     }
