@@ -31,12 +31,12 @@ class SearchAdapter {
     
     func createGenres(jsonObj:JSON)->[Genre]{
         for (id, info) in jsonObj {
-            genres.append(Genre(String(describing: info["name"]), id: id, songIDs: addSongs(forID: info["songs"])!))
+            genres.append(Genre(String(describing: info["name"]), id: id, songIDs: addSongsToGenres(forID: info["songs"])!))
         }
         return genres
     }
     
-    private func addSongs(forID songs: JSON) -> [Int]? {
+    private func addSongsToGenres(forID songs: JSON) -> [Int]? {
         var songList = [Int]()
         for (_, song) in songs {
             songList.append(Int(String(describing: song))!)
@@ -61,4 +61,15 @@ class SearchAdapter {
         }
         return songs
     }
+    
+    func getSongDescriptions(song:Song)->[String]{
+        var songDescriptions = [String]()
+        songDescriptions.append(song.songTitle!)
+        songDescriptions.append(String(describing: song.id!))
+        songDescriptions.append(song.description!)
+        songDescriptions.append(song.coverArt!)
+        return songDescriptions
+    }
+    
+    
 }

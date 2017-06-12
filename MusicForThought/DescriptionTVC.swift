@@ -5,8 +5,7 @@ class DescriptionTVC: UITableViewController {
     var songsAdded = 0
     var song:Song?{
         didSet{
-        descriptionVM.addSong(song!)
-        songsAdded += 1
+        descriptionVM.song = song
         }
     }
     
@@ -19,7 +18,7 @@ class DescriptionTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return descriptionVM.songsToGetDescriptionsOf
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -32,7 +31,7 @@ class DescriptionTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        let song  = descriptionVM.songLib[indexPath.section]
+        let song  = descriptionVM.showSongDescriptions[indexPath.section]
         cell.textLabel?.text = song.description
         return cell
     }
