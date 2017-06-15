@@ -8,13 +8,18 @@ class SearchAdapter {
     var genres: [Genre] = []
     var songs: [Song] = []
     
-    func searchCategories() -> [Category]? {
-        let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "CategoriesData"))
-        categories = createCategories(jsonObj: jsonObj!)!
-        _ = api.dummySearchRequestIfAPIExisted(forPath: "/api/1/tags")
+    
+    func searchCategories()->[Category] {
+        api.retrieveData(forPath: "categories") { response in
+           self.categories = self.createCategories(jsonObj: response)!
+            DispatchQueue.main.async{
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "categoriesRecieved"), object: nil)
+            }
+
+        }
         return categories
     }
-    
+
     private func createCategories(jsonObj:JSON)->[Category]?{
         for (_, title) in jsonObj {
             categories.append(Category(type: String(describing: title),genreIDs:["1","2"]))
@@ -23,9 +28,9 @@ class SearchAdapter {
     }
     
     func searchGenres(genreID:[String]) -> [Genre]? {
-        let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "GenreData"))
-        _ = api.dummySearchRequestIfAPIExisted(forPath: "/api/1/category/agt/{" + "\(genreID)" + "}")
-        genres = createGenres(jsonObj: jsonObj!)
+       api.retrieveData(forPath: "genres") { response in
+        self.genres = self.createGenres(jsonObj: response)
+        }
         return genres
     }
     
@@ -45,11 +50,14 @@ class SearchAdapter {
     }
     
     func searchSongs(_ songsAssociatedWithTheGenre:[Int]) -> [Song]? {
-        let jsonObj = api.retrieveData(forPath: api.findJSONfilePath(forPath: "SongData"))
+        var songs = [Song]()
+        /*
+        let jsonObj = api.retrieveData(forPath: "songs")
         songs = createSongs(jsonObj: jsonObj!, _songsAssociatedWithTheGenre: songsAssociatedWithTheGenre)
         let songIdsAsStrings = songsAssociatedWithTheGenre.map
             {String($0)}
         _ = api.dummySearchRequestIfAPIExisted(forPath: String( "/api/1/song/multi?id=" + songIdsAsStrings.joined(separator: "&id=")))
+         */
         return songs
     }
     

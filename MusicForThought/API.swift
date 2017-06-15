@@ -4,7 +4,7 @@ import SwiftyJSON
 
 class API{
     var url:String?
-    
+    /*
     func retrieveData(forPath path: String) -> JSON? {
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
@@ -19,7 +19,7 @@ class API{
     func findJSONfilePath(forPath : String) -> String {
         return Bundle.main.path(forResource: forPath, ofType: "JSON")!
     }
-    
+    */
     func dummySearchRequestIfAPIExisted(forPath path:String)->JSON{
         url = path
         Alamofire.request(url!)
@@ -35,6 +35,21 @@ class API{
                     return
                 }
         }
-    return JSON.null
+        return JSON.null
     }
+    
+    func uploadData(){
+    let paramters = MockData().getParamters()
+        Alamofire.request("http://localhost:2525/imposters/", method: .post, parameters: paramters, encoding: JSONEncoding.default).responseJSON{ response in
+        }
+        }
+        
+    func retrieveData(forPath path: String, completion : @escaping (JSON) -> ()){
+    Alamofire.request("http://localhost:4545/" + "\(path)").responseJSON { response in
+    let jsonData = JSON(data: response.data!)
+    completion(jsonData)
+        
+        }
+    }
+
 }
