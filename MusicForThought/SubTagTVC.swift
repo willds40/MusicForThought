@@ -3,18 +3,13 @@ import UIKit
 class SubTagTVC: UITableViewController {
     var subTagVM:SubTagVM?
     var genre:Genre?
-    var genreID:[String]?{
-        didSet{
-            createGenres()
-        }
-    }
-    func createGenres(){
-        subTagVM = SubTagVM()
-        subTagVM?.genreId = genreID
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        subTagVM = SubTagVM()
+        subTagVM?.reloadTableView = { viewModel in
+            self.tableView.reloadData()
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

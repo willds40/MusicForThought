@@ -8,18 +8,37 @@ class SearchAdapter {
     var genres: [Genre] = []
     var songs: [Song] = []
     
-    
-    func searchCategories()->[Category] {
+    func searchCategories(handler: @escaping ([Category]) -> Void) {
         api.retrieveData(forPath: "categories") { response in
-           self.categories = self.createCategories(jsonObj: response)!
-            DispatchQueue.main.async{
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "categoriesRecieved"), object: nil)
-            }
-
+            self.categories = self.createCategories(jsonObj: response)!
+            handler(self.categories)
         }
-        return categories
     }
-
+    
+    func searchGenres(handler: @escaping ([Genre]) -> Void) {
+        api.retrieveData(forPath: "genres") { response in
+            self.genres = self.createGenres(jsonObj: response)
+            handler(self.genres)
+        }
+    }
+    
+    func searchSongs(_ songsAssociatedWithTheGenre: [Int], handler: @escaping ([Song]) ->Void) {
+        api.retrieveData(forPath: "songs"){ response in
+            self.songs = self.createSongs(jsonObj: response, songsAssociatedWithTheGenre)
+            handler(self.songs)
+        }
+    }
+    
+    private func createSongs (jsonObj:JSON, _ songsAssociatedWithTheGenre:[Int])-> [Song]{
+        
+        for (id, info) in jsonObj {
+            if songsAssociatedWithTheGenre.contains(Int(id)!){
+                songs.append(Song(songTitle: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverArt: String(describing: info["coverArt"])))
+            }
+        }
+        return songs
+    }
+    
     private func createCategories(jsonObj:JSON)->[Category]?{
         for (_, title) in jsonObj {
             categories.append(Category(type: String(describing: title),genreIDs:["1","2"]))
@@ -27,14 +46,7 @@ class SearchAdapter {
         return categories
     }
     
-    func searchGenres(genreID:[String]) -> [Genre]? {
-       api.retrieveData(forPath: "genres") { response in
-        self.genres = self.createGenres(jsonObj: response)
-        }
-        return genres
-    }
-    
-    func createGenres(jsonObj:JSON)->[Genre]{
+    private func createGenres(jsonObj:JSON)->[Genre]{
         for (id, info) in jsonObj {
             genres.append(Genre(String(describing: info["name"]), id: id, songIDs: addSongsToGenres(forID: info["songs"])!))
         }
@@ -49,27 +61,6 @@ class SearchAdapter {
         return songList
     }
     
-    func searchSongs(_ songsAssociatedWithTheGenre:[Int]) -> [Song]? {
-        var songs = [Song]()
-        /*
-        let jsonObj = api.retrieveData(forPath: "songs")
-        songs = createSongs(jsonObj: jsonObj!, _songsAssociatedWithTheGenre: songsAssociatedWithTheGenre)
-        let songIdsAsStrings = songsAssociatedWithTheGenre.map
-            {String($0)}
-        _ = api.dummySearchRequestIfAPIExisted(forPath: String( "/api/1/song/multi?id=" + songIdsAsStrings.joined(separator: "&id=")))
-         */
-        return songs
-    }
-    
-    private func createSongs (jsonObj:JSON, _songsAssociatedWithTheGenre:[Int])-> [Song]{
-        for (id, info) in jsonObj {
-            if _songsAssociatedWithTheGenre.contains(Int(id)!){
-                songs.append(Song(songTitle: String(describing: info["name"]), id: id, description: String(describing: info["description"]), coverArt: String(describing: info["coverArt"])))
-            }
-        }
-        return songs
-    }
-    
     func getSongDescriptions(song:Song)->[String]{
         var songDescriptions = [String]()
         songDescriptions.append(song.songTitle!)
@@ -78,6 +69,4 @@ class SearchAdapter {
         songDescriptions.append(song.coverArt!)
         return songDescriptions
     }
-    
-    
 }

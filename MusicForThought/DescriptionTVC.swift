@@ -2,7 +2,6 @@ import UIKit
 
 class DescriptionTVC: UITableViewController {
     let descriptionVM = DescriptionVM()
-    var songsAdded = 0
     var song:Song?{
         didSet{
         descriptionVM.song = song

@@ -9,10 +9,9 @@ class TagTVC: UITableViewController {
         tagVM = TagVM()
         tagVM?.tags = []
         self.title = "FIND MUSIC BY"
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name(rawValue: "reloadTable"), object: nil)
-    }
-    func reloadTableView(){
-    self.tableView.reloadData()
+        tagVM?.reloadTableView = { viewModel in
+            self.tableView.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,7 +23,7 @@ class TagTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (tagVM?.tags!.count)!
+        return (tagVM?.tags.count)!
     }
     
     private struct Storyboard{
@@ -33,7 +32,7 @@ class TagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        let category = tagVM?.tags?[indexPath.row]
+        let category = tagVM?.tags[indexPath.row]
         cell.textLabel?.text = category?.type
         return cell
     }
@@ -43,10 +42,9 @@ class TagTVC: UITableViewController {
             if let subTagTVC = segue.destination as? SubTagTVC {
                 if self.tableView.indexPathForSelectedRow != nil{
                 let path = self.tableView.indexPathForSelectedRow!
-                    category = self.tagVM?.tags?[path.row]
+                    category = self.tagVM?.tags[path.row]
                 }
                 subTagTVC.title = category?.type
-                subTagTVC.genreID = category?.genreIDs
             }
         }
     }

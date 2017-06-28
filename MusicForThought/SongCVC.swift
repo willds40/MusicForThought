@@ -17,6 +17,9 @@ class SongCVC: UICollectionViewController {
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         collectionView?.isUserInteractionEnabled = true
+        songVM.reloadTableView = { viewModel in
+            self.collectionView?.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
