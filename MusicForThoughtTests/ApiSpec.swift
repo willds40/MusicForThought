@@ -1,25 +1,48 @@
 import Quick
 import Nimble
 import SwiftyJSON
+import Alamofire
+
 @testable import MusicForThought
 class ApiSpec :QuickSpec{
-    var songPath = "/Users/wdsand/Documents/Xcode/MusicForThought/SongData.JSON"
     override func spec() {
-        describe("search request function"){
-            let api = API ()
-            context("endpoint is string"){
-                it("url should equal a string'"){
-            _ = api.dummySearchRequestIfAPIExisted(forPath: "test")
-                    expect(api.url).to(equal("test"))
+        var APImodel: API?
+        
+        beforeEach {
+            APImodel = API()
+        }
+        
+        describe(".fetchData") {
+            context("when a request is made for categories") {
+                it("returns json") {
+                    var jsonData: JSON = ""
+                    APImodel?.retrieveData(forPath: "categories") { response in
+                        jsonData = response
+                    }
+                    expect(jsonData).to(beAKindOf(JSON.self))
                 }
             }
-        }
-        describe("retrieve data method"){
-            let api = API()
-            let jsonObj = api.retrieveData(forPath: self.songPath)
-            it ("should return a json object"){
-        expect(jsonObj).to(beAKindOf(JSON.self))
+            context("when a request is made for genres") {
+                it("returns json") {
+                    var jsonData: JSON = ""
+                    APImodel?.retrieveData(forPath: "genres") { response in
+                        jsonData = response
+                    }
+                    expect(jsonData).to(beAKindOf(JSON.self))
+                }
+                
             }
+            context("when a request is made for songs") {
+                it("returns json") {
+                    var jsonData: JSON = ""
+                    APImodel?.retrieveData(forPath: "songs") { response in
+                        jsonData = response
+                    }
+                    expect(jsonData).to(beAKindOf(JSON.self))
+                }
+                
+            }
+            
         }
     }
 }
