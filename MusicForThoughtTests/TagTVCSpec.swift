@@ -23,12 +23,14 @@ class TagTVCSpec: QuickSpec{
             describe("number of rows in the section"){
                 context("when there is one section"){
                     let tagVM = TagVM()
+                    
                     it("should equal the count of the tags array in tags vm"){
-                        expect(tagTVC.tableView(tagTVC.view as! UITableView, numberOfRowsInSection: 1)).to(equal(tagVM.tags.count))
+                        expect(tagTVC.tableView(tagTVC.view as! UITableView, numberOfRowsInSection: 1)).toEventually(equal(tagVM.tags.count))
                     }
                 }
             }
-        }    }
+        }
+    }
 }
 
 

@@ -26,14 +26,12 @@ class SubTagTVCSpec: QuickSpec{
                 }
             }
             
-            
-//            describe("rows in section"){
-//                it ("should equal the number of genres in genre view model"){
-//                    let subTagVM = SubTagVM()
-//                    subTagVM.genres = [Genre( "Test1", id:"1", songIDs:[1]), Genre( "Test2", id:"1", songIDs:[1]), Genre( "Test3", id:"1", songIDs:[1])]
-//                expect(subTagTVC.tableView(subTagTVC.view as! UITableView, numberOfRowsInSection: 1)).to(equal(subTagVM.genres.count))
-//                }
-//            }
+            describe("rows in section"){
+                it ("should equal the number of genres in genre view model"){
+                    let subTagVM = SubTagVM()
+                expect(subTagTVC.tableView(subTagTVC.view as! UITableView, numberOfRowsInSection: 1)).toEventually(equal(subTagVM.genres.count))
+                }
+            }
         }
     }
 }
