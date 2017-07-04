@@ -62,11 +62,7 @@ class SearchAdapter {
     }
     
     func getSongDescriptions(song:Song)->[String]{
-        var songDescriptions = [String]()
-        songDescriptions.append(song.songTitle!)
-        songDescriptions.append(String(describing: song.id!))
-        songDescriptions.append(song.description!)
-        songDescriptions.append(song.coverArt!)
+        let songDescriptions = [song.songTitle!,String(describing: song.id!),song.description!,song.coverArt!]
         return songDescriptions
     }
 }
