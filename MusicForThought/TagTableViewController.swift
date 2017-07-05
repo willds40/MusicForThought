@@ -15,7 +15,7 @@ class TagTVC: UITableViewController {
     private  func setupViewModel(){
         tagVM = TagVM()
         tagVM?.tags = []
-         self.title = tagVM?.title 
+         self.title = tagVM?.title
     }
     
     override func didReceiveMemoryWarning() {
