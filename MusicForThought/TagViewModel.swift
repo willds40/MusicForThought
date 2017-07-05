@@ -2,6 +2,7 @@ import Foundation
 
 class TagVM{
     var searchAdapter = SearchAdapter()
+    var title = "FIND MUSIC BY"
     var reloadTableView: ((TagVM) -> ())?
     var tags: [Category]=[]{
         didSet{
