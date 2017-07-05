@@ -29,6 +29,12 @@ class SearchAdapter {
         }
     }
     
+    func getSongDescriptions(song:Song)->[String]{
+        let songDescriptions = [song.songTitle!,String(describing: song.id!),song.description!,song.coverArt!]
+        return songDescriptions
+    }
+
+    
     private func createSongs (jsonObj:JSON, _ songsAssociatedWithTheGenre:[Int])-> [Song]{
         
         for (id, info) in jsonObj {
@@ -61,8 +67,4 @@ class SearchAdapter {
         return songList
     }
     
-    func getSongDescriptions(song:Song)->[String]{
-        let songDescriptions = [song.songTitle!,String(describing: song.id!),song.description!,song.coverArt!]
-        return songDescriptions
-    }
 }

@@ -8,6 +8,7 @@ class TagVM{
             self.reloadTableView?(self)
         }
     }
+    
     init() {
         getTags()
     }

@@ -6,12 +6,16 @@ class TagTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tagVM = TagVM()
-        tagVM?.tags = []
+        setupViewModel()
         self.title = "FIND MUSIC BY"
         tagVM?.reloadTableView = { viewModel in
             self.tableView.reloadData()
         }
+    }
+    
+    private  func setupViewModel(){
+        tagVM = TagVM()
+        tagVM?.tags = []
     }
     
     override func didReceiveMemoryWarning() {
