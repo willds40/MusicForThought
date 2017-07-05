@@ -3,7 +3,6 @@
 import UIKit
 
 class SongCVC: UICollectionViewController {
-    var songListIsEmpty = 0
     var song:Song?
     var songVM = SongsVM()
     var selectedRow = 0
@@ -14,12 +13,16 @@ class SongCVC: UICollectionViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView?.delegate = self
-        self.collectionView?.dataSource = self
-        collectionView?.isUserInteractionEnabled = true
+        setupCollectionView()
         songVM.reloadTableView = { viewModel in
             self.collectionView?.reloadData()
         }
+    }
+    
+    private func setupCollectionView(){
+        self.collectionView?.delegate = self
+        self.collectionView?.dataSource = self
+        collectionView?.isUserInteractionEnabled = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,9 +57,7 @@ class SongCVC: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if songVM.songs.count != songListIsEmpty {
             song   = songVM.songs[selectedRow]
-        }
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
                 descriptionTVC.song = song
