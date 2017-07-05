@@ -6,11 +6,13 @@ class MockData{
     var categories:Parameters
     var genres:Parameters
     var songs:Parameters
+    
     init() {
          categories = CategoriesLibrary().getCategories()
          genres = GenresLibrary().getGenres()
          songs = SongLibrary().getSongs()
     }
+    
     func getParamters() ->Parameters{
                 let parameters: Parameters = [
             "port": 4545,
