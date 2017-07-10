@@ -20,6 +20,7 @@ class SongCVCCSpec: QuickSpec{
                 songCVC.song = song
                 it("song of the destinationTVC should be the same as SongCVC"){
                     let descriptionTVC = DescriptionTVC()
+                    
                     songCVC.prepare(for: UIStoryboardSegue.init(identifier: "DescriptionSegue", source: songCVC, destination: descriptionTVC), sender: songCVC)
                     expect(descriptionTVC.song).to(be(song))
                 }

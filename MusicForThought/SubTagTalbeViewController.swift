@@ -36,12 +36,14 @@ class SubTagTVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SongSegue" && self.tableView.indexPathForSelectedRow != nil  {
+        if segue.identifier == "SongSegue"{
             let songCVC = segue.destination as? SongCVC
+            if self.tableView.indexPathForSelectedRow != nil  {
             let path = self.tableView.indexPathForSelectedRow!
-            genre = subTagVM?.genres[path.row]
-            setSongsAssociatedWithTheGenre(genre!, songCVC!)
+                genre = subTagVM?.genres[path.row]
             }
+            setSongsAssociatedWithTheGenre(genre!, songCVC!)
+        }
         }
     }
 

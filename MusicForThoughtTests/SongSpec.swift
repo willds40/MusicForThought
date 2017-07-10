@@ -4,21 +4,15 @@ import Nimble
 
 class SongSpec: QuickSpec{
     override func spec() {
+        let songVM = SongsVM()
         describe("songVM"){
-            class mockSongCVC:SongCVC{
-                override func mockSongsAssociatedByGenre(songsAssocaitedByGenre:[Int])->[Int]{
-                    let songVM = SongsVM()
-                    songVM.songsAsscoaitedWithTheGenre = songsAssocaitedByGenre
-                    return songVM.songsAsscoaitedWithTheGenre
-                }
-            }
-            context("ids in SongCVC is equals to the songs associated with Rock"){
-                it("songs ids hould be equal to the ids with Rock"){
-                    let myClassInstance = mockSongCVC()
-                    let songIDS = [3,4]
-                    let result = myClassInstance.mockSongsAssociatedByGenre(songsAssocaitedByGenre: songIDS)
-                    expect(result).to(contain([3,4]))
-                }
+            let serchAdapter = SearchAdapter()
+            var songs = [Song]()
+            it("should have an array with the same amount of songs as retrieved from the Search Adapter"){
+                serchAdapter.searchSongs([1,2], handler:{ resposne in
+                    songs = resposne
+                })
+            expect(songVM.songs.count).toEventually(equal(songs.count))
             }
         }
     }

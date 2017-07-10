@@ -65,10 +65,13 @@ class SongCVC: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
-                song   = songVM.songs[selectedRow]
+                if song == nil{
+                    song   = songVM.songs[selectedRow]
+                }
                 descriptionTVC.song = song
+                
             }
         }
-    }    
+    }
 }
 
