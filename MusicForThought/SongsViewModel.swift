@@ -4,11 +4,11 @@ class SongsVM{
     var reloadTableView: ((SongsVM) -> ())?
     var searchAdapter = SearchAdapter()
     var songsAsscoaitedWithTheGenre = [Int](){
-        didSet {
-            getSongs(songsAsscoaitedWithTheGenre)
-
+    didSet{
+        getSongs(songsAsscoaitedWithTheGenre)
         }
     }
+    
     var songs = [Song](){
         didSet{
             self.reloadTableView?(self)

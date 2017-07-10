@@ -15,13 +15,14 @@ class SongCVCCSpec: QuickSpec{
                 expect(songCVC.view).toNot(beNil())
             }
             describe ("segue"){
-                let songCVC = SongCVC()
+            it("song of the destinationTVC should be the same as SongCVC"){
                 let song = Song(songTitle: "Test", id: "2.0", description: "Test", coverArt: "Test")
                 songCVC.song = song
-                it("song of the destinationTVC should be the same as SongCVC"){
-                    let descriptionTVC = DescriptionTVC()
-                    
+                let descriptionTVC = DescriptionTVC()
+                let songVM = SongsVM()
+                songVM.songs.append(song)
                     songCVC.prepare(for: UIStoryboardSegue.init(identifier: "DescriptionSegue", source: songCVC, destination: descriptionTVC), sender: songCVC)
+                    
                     expect(descriptionTVC.song).to(be(song))
                 }
             }
