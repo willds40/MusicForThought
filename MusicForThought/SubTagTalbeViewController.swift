@@ -7,7 +7,7 @@ class SubTagTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
-        subTagVM?.reloadTableView = { viewModel in
+        let _ = subTagVM?.genres.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
     }
@@ -21,7 +21,7 @@ class SubTagTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ((subTagVM?.genres.count))!
+        return ((subTagVM?.genres.value.count))!
     }
     
     private struct Storyboard{
@@ -30,7 +30,7 @@ class SubTagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        let genre = subTagVM?.genres[indexPath.row]
+        let genre = subTagVM?.genres.value[indexPath.row]
         cell.textLabel?.text = genre?.name
         return cell
     }
@@ -40,7 +40,7 @@ class SubTagTVC: UITableViewController {
             let songCVC = segue.destination as? SongCVC
             if self.tableView.indexPathForSelectedRow != nil  {
             let path = self.tableView.indexPathForSelectedRow!
-                genre = subTagVM?.genres[path.row]
+                genre = subTagVM?.genres.value[path.row]
             }
             setSongsAssociatedWithTheGenre(genre!, songCVC!)
         }

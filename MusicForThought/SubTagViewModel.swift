@@ -1,21 +1,20 @@
 import Foundation
+import ReactiveCocoa
+import ReactiveSwift
 
 class SubTagVM{
     var reloadTableView: ((SubTagVM) -> ())?
     var searchAdapter = SearchAdapter()
     var genreId:[String]?
-    var genres:[Genre] = []{
-        didSet{
-            self.reloadTableView?(self)
-        }
-    }
+    var genres = MutableProperty<[Genre]>([])
+        
     init() {
         getGenres()
     }
     
     private func getGenres() {
         searchAdapter.searchGenres(){response in
-            self.genres = response
+            self.genres.value = response
         }
     }
 }

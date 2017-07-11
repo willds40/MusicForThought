@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 class SongCVC: UICollectionViewController {
@@ -7,11 +5,12 @@ class SongCVC: UICollectionViewController {
     var songVM:SongsVM?
     var selectedCell:Int?
     var songsAssociatedWithGenre = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         setupViewModel()
-        songVM?.reloadTableView = { viewModel in
+        let _ = songVM?.songs.producer.startWithValues { _ in
             self.collectionView?.reloadData()
         }
     }
@@ -35,7 +34,7 @@ class SongCVC: UICollectionViewController {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ((songVM?.songs.count))!
+        return ((songVM?.songs.value.count))!
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,7 +49,7 @@ class SongCVC: UICollectionViewController {
     private func styleCell(cell: SongCell, borderColor:CGColor, borderWith: CGFloat, indexPath:IndexPath){
         cell.layer.borderColor = UIColor.black.cgColor
         cell.backgroundColor = UIColor.white
-        let song   = songVM?.songs[indexPath.row]
+        let song   = songVM?.songs.value[indexPath.row]
         cell.songTitleLabel.text = song?.songTitle
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
@@ -68,7 +67,7 @@ class SongCVC: UICollectionViewController {
         if segue.identifier == "DescriptionSegue" {
             if let descriptionTVC = segue.destination as? DescriptionTVC {
                 if selectedCell != nil {
-                song   = songVM?.songs[selectedCell!]
+                song   = songVM?.songs.value[selectedCell!]
                 }
                 descriptionTVC.song = song
                 
