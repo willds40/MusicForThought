@@ -15,7 +15,7 @@ class SubTagSpec: QuickSpec{
                 serchAdapter.searchGenres(handler: { resposne in
                     genres = resposne
                 })
-            expect(subTagVM.genres.count).toEventually(equal(genres.count))
+            expect(subTagVM.genres.value.count).toEventually(equal(genres.count))
             }
         }
         

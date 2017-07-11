@@ -25,7 +25,7 @@ class TagTVCSpec: QuickSpec{
                     let tagVM = TagVM()
                     
                     it("should equal the count of the tags array in tags vm"){
-                        expect(tagTVC.tableView(tagTVC.view as! UITableView, numberOfRowsInSection: 1)).toEventually(equal(tagVM.tags.count))
+                        expect(tagTVC.tableView(tagTVC.view as! UITableView, numberOfRowsInSection: 1)).toEventually(equal(tagVM.tags.value.count))
                     }
                 }
             }

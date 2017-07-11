@@ -12,11 +12,11 @@
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
 
-fastlane_version "4.4.5"
+fastlane_version "2.46.0"
 
 default_platform :ios
 xcode_version = '8.3.3'
-app_version = '1.0'
+app_version = '5.0'
 
 platform :ios do
   before_all do

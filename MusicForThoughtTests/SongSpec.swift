@@ -12,7 +12,7 @@ class SongSpec: QuickSpec{
                 serchAdapter.searchSongs([1,2], handler:{ resposne in
                     songs = resposne
                 })
-            expect(songVM.songs.count).toEventually(equal(songs.count))
+            expect(songVM.songs.value.count).toEventually(equal(songs.count))
             }
         }
     }

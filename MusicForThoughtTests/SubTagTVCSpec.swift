@@ -29,7 +29,7 @@ class SubTagTVCSpec: QuickSpec{
             describe("rows in section"){
                 it ("should equal the number of genres in genre view model"){
                     let subTagVM = SubTagVM()
-                expect(subTagTVC.tableView(subTagTVC.view as! UITableView, numberOfRowsInSection: 1)).toEventually(equal(subTagVM.genres.count))
+                expect(subTagTVC.tableView(subTagTVC.view as! UITableView, numberOfRowsInSection: 1)).toEventually(equal(subTagVM.genres.value.count))
                 }
             }
         }

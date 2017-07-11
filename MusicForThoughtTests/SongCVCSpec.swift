@@ -20,7 +20,7 @@ class SongCVCCSpec: QuickSpec{
                 songCVC.song = song
                 let descriptionTVC = DescriptionTVC()
                 let songVM = SongsVM()
-                songVM.songs.append(song)
+                songVM.songs.value.append(song)
                     songCVC.prepare(for: UIStoryboardSegue.init(identifier: "DescriptionSegue", source: songCVC, destination: descriptionTVC), sender: songCVC)
                     
                     expect(descriptionTVC.song).to(be(song))

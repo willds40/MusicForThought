@@ -15,7 +15,7 @@ class TagSpec: QuickSpec{
                 serchAdapter.searchCategories(handler: { resposne in
                     categories = resposne
                 })
-               expect(tagVM.tags.count).toEventually(equal(categories.count))
+               expect(tagVM.tags.value.count).toEventually(equal(categories.count))
             }
         }
     }
