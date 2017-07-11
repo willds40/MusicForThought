@@ -47,7 +47,7 @@ class SearchAdapter {
     
     private func createCategories(jsonObj:JSON)->[Category]?{
         for (_, title) in jsonObj {
-            categories.append(Category(type: String(describing: title),genreIDs:["1","2"]))
+            categories.append(Category(type: String(describing: title)))
         }
         return categories
     }

@@ -42,15 +42,23 @@ class SongCVC: UICollectionViewController {
         let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
                                                       for: indexPath) as!SongCell
-        styleCell(cell: cell, borderColor: borderColor, borderWith: borderWidth, indexPath: indexPath)
+        colorCell(cell: cell, borderColor: borderColor, borderWidth: borderWidth, indexPath: indexPath)
         return cell
     }
     
-    private func styleCell(cell: SongCell, borderColor:CGColor, borderWith: CGFloat, indexPath:IndexPath){
-        cell.layer.borderColor = UIColor.black.cgColor
+    private func colorCell(cell: SongCell, borderColor:CGColor, borderWidth: CGFloat, indexPath:IndexPath){
         cell.backgroundColor = UIColor.white
+        createCellImage(cell: cell, borderColor: borderColor, borderWith: borderWidth)
+        createText(cell: cell, indexPath: indexPath)
+    }
+    
+    private func createText(cell:SongCell, indexPath:IndexPath){
         let song   = songVM?.songs.value[indexPath.row]
         cell.songTitleLabel.text = song?.songTitle
+
+    }
+    
+    private func createCellImage(cell:SongCell, borderColor:CGColor, borderWith: CGFloat ){
         let itunesLogo = UIImage(named:"itunes.jpg")
         cell.image.image = itunesLogo
         cell.image.layer.borderWidth = borderWith

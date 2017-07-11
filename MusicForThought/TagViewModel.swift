@@ -13,7 +13,8 @@ class TagVM{
 
     private func getTags(){
         searchAdapter.searchCategories(){response in
-        self.tags.value = response        }
+        self.tags.value = response
+        }
     }
   }
 

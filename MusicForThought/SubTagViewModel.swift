@@ -3,7 +3,6 @@ import ReactiveCocoa
 import ReactiveSwift
 
 class SubTagVM{
-    var reloadTableView: ((SubTagVM) -> ())?
     var searchAdapter = SearchAdapter()
     var genreId:[String]?
     var genres = MutableProperty<[Genre]>([])

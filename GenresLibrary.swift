@@ -2,7 +2,8 @@ import Foundation
 import Alamofire
 class GenresLibrary{
     func getGenres()-> Parameters {
-        let genres:Parameters = ["1": [
+        let genres:Parameters =
+        ["1": [
             "name": "Rap",
             "songs": ["1", "2"]
         ],

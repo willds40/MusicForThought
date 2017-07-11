@@ -7,7 +7,6 @@ class TagTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
-        
         let _ = tagVM?.tags.producer.startWithValues { _ in
             self.tableView.reloadData()
         }

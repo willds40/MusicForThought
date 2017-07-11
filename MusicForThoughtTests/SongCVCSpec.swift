@@ -14,6 +14,7 @@ class SongCVCCSpec: QuickSpec{
             it(" should be loaded and not be nil"){
                 expect(songCVC.view).toNot(beNil())
             }
+            
             describe ("segue"){
             it("song of the destinationTVC should be the same as SongCVC"){
                 let song = Song(songTitle: "Test", id: "2.0", description: "Test", coverArt: "Test")
