@@ -1,15 +1,12 @@
 import Foundation
+import ReactiveCocoa
+import ReactiveSwift
 
 class TagVM{
     var searchAdapter = SearchAdapter()
     var title = "FIND MUSIC BY"
     //would have used reactive coca but didn't work with the new xcode
-    var reloadTableView: ((TagVM) -> ())?
-    var tags: [Category]=[]{
-        didSet{
-            self.reloadTableView?(self)
-        }
-    }
+    var tags = MutableProperty<[Category]>([])
     
     init() {
         getTags()
@@ -17,7 +14,7 @@ class TagVM{
 
     private func getTags(){
         searchAdapter.searchCategories(){response in
-        self.tags = response        }
+        self.tags.value = response        }
     }
   }
 

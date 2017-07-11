@@ -7,14 +7,14 @@ class TagTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
-        tagVM?.reloadTableView = { viewModel in
+        
+        let _ = tagVM?.tags.producer.startWithValues { _ in
             self.tableView.reloadData()
         }
     }
-    
+
     private  func setupViewModel(){
         tagVM = TagVM()
-        tagVM?.tags = []
          self.title = tagVM?.title
     }
     
@@ -27,7 +27,7 @@ class TagTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (tagVM?.tags.count)!
+        return (tagVM?.tags.value.count)!
     }
     
     private struct Storyboard{
@@ -36,7 +36,7 @@ class TagTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.TagCellIndetifier, for: indexPath)
-        let category = tagVM?.tags[indexPath.row]
+        let category = tagVM?.tags.value[indexPath.row]
         cell.textLabel?.text = category?.type
         return cell
     }
@@ -46,7 +46,7 @@ class TagTVC: UITableViewController {
             if let subTagTVC = segue.destination as? SubTagTVC {
                 if self.tableView.indexPathForSelectedRow != nil{
                 let path = self.tableView.indexPathForSelectedRow!
-                    category = self.tagVM?.tags[path.row]
+                    category = self.tagVM?.tags.value[path.row]
                 }
                 subTagTVC.title = category?.type
             }

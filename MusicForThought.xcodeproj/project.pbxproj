@@ -40,6 +40,12 @@
 		E80894DB1EC3701F006DE56D /* CHMusic.png in Resources */ = {isa = PBXBuildFile; fileRef = E80894D91EC36DDE006DE56D /* CHMusic.png */; };
 		E80894DD1EC3793D006DE56D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894DC1EC3793D006DE56D /* API.swift */; };
 		E80894E61EC4B477006DE56D /* AdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80894E51EC4B477006DE56D /* AdapterSpec.swift */; };
+		E83FECCA1F15079B00F61137 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A06A081F13CEB800142F15 /* Result.framework */; };
+		E83FECCB1F15079B00F61137 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8A06A081F13CEB800142F15 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E83FECCC1F15079B00F61137 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A06A051F13CEA100142F15 /* ReactiveSwift.framework */; };
+		E83FECCD1F15079B00F61137 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8A06A051F13CEA100142F15 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E83FECCF1F1507DA00F61137 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83FECCE1F1507DA00F61137 /* ReactiveCocoa.framework */; };
+		E83FECD01F1507DA00F61137 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E83FECCE1F1507DA00F61137 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E849F7221EF2C87400AA85C9 /* MockDataSetupAAlamoFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F7211EF2C87400AA85C9 /* MockDataSetupAAlamoFire.swift */; };
 		E849F7241EF2E4DE00AA85C9 /* CategoriesLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F7231EF2E4DE00AA85C9 /* CategoriesLibrary.swift */; };
 		E849F7261EF2E82C00AA85C9 /* GenresLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F7251EF2E82C00AA85C9 /* GenresLibrary.swift */; };
@@ -79,8 +85,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E83FECCB1F15079B00F61137 /* Result.framework in CopyFiles */,
 				E85007911EE9B18B00F68367 /* SwiftyJSON.framework in CopyFiles */,
 				E8E481FF1F14228700B80A15 /* Alamofire.framework in CopyFiles */,
+				E83FECCD1F15079B00F61137 /* ReactiveSwift.framework in CopyFiles */,
+				E83FECD01F1507DA00F61137 /* ReactiveCocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +144,7 @@
 		E80894D91EC36DDE006DE56D /* CHMusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CHMusic.png; sourceTree = "<group>"; };
 		E80894DC1EC3793D006DE56D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E80894E51EC4B477006DE56D /* AdapterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterSpec.swift; sourceTree = "<group>"; };
+		E83FECCE1F1507DA00F61137 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E849F7211EF2C87400AA85C9 /* MockDataSetupAAlamoFire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataSetupAAlamoFire.swift; sourceTree = "<group>"; };
 		E849F7231EF2E4DE00AA85C9 /* CategoriesLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesLibrary.swift; sourceTree = "<group>"; };
 		E849F7251EF2E82C00AA85C9 /* GenresLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresLibrary.swift; sourceTree = "<group>"; };
@@ -155,8 +165,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83FECCA1F15079B00F61137 /* Result.framework in Frameworks */,
 				E85007901EE9B18B00F68367 /* SwiftyJSON.framework in Frameworks */,
 				E8E481FE1F14228700B80A15 /* Alamofire.framework in Frameworks */,
+				E83FECCC1F15079B00F61137 /* ReactiveSwift.framework in Frameworks */,
+				E83FECCF1F1507DA00F61137 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +195,6 @@
 		E808944B1EBCD184006DE56D = {
 			isa = PBXGroup;
 			children = (
-				E8A06A081F13CEB800142F15 /* Result.framework */,
-				E8A06A051F13CEA100142F15 /* ReactiveSwift.framework */,
 				E850078E1EE9ADBD00F68367 /* carthage.sh */,
 				E80894561EBCD185006DE56D /* MusicForThought */,
 				E808946B1EBCD185006DE56D /* MusicForThoughtTests */,
@@ -241,6 +252,9 @@
 		E80894871EBCD4E4006DE56D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E83FECCE1F1507DA00F61137 /* ReactiveCocoa.framework */,
+				E8A06A081F13CEB800142F15 /* Result.framework */,
+				E8A06A051F13CEA100142F15 /* ReactiveSwift.framework */,
 				E850078F1EE9B18B00F68367 /* SwiftyJSON.framework */,
 				E808948E1EBCD51F006DE56D /* Nimble.framework */,
 				E808948C1EBCD510006DE56D /* Quick.framework */,
