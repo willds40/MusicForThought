@@ -39,8 +39,7 @@ class SubTagTVC: UITableViewController {
         if segue.identifier == "SongSegue"{
             let songCVC = segue.destination as? SongCVC
             if self.tableView.indexPathForSelectedRow != nil  {
-            let path = self.tableView.indexPathForSelectedRow!
-                genre = subTagVM?.genres.value[path.row]
+                genre = subTagVM?.genres.value[self.tableView.indexPathForSelectedRow!.row]
             }
             setSongsAssociatedWithTheGenre(genre!, songCVC!)
         }

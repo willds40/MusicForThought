@@ -42,13 +42,11 @@ class TagTVC: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SubTagSegue" {
-            if let subTagTVC = segue.destination as? SubTagTVC {
+            let subTagTVC = segue.destination as? SubTagTVC
                 if self.tableView.indexPathForSelectedRow != nil{
-                let path = self.tableView.indexPathForSelectedRow!
-                    category = self.tagVM?.tags.value[path.row]
+                category = self.tagVM?.tags.value[self.tableView.indexPathForSelectedRow!.row]
                 }
-                subTagTVC.title = category?.type
-            }
+                subTagTVC?.title = category?.type
         }
     }
 }
