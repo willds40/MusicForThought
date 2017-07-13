@@ -41,7 +41,7 @@ class SongCVC: UICollectionViewController {
         let borderColor: CGColor! = UIColor.black.cgColor
         let borderWidth: CGFloat = 1
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SongCell",
-                                                      for: indexPath) as!SongCell
+        for: indexPath) as!SongCell
         colorCell(cell: cell, borderColor: borderColor, borderWidth: borderWidth, indexPath: indexPath)
         return cell
     }
@@ -73,13 +73,11 @@ class SongCVC: UICollectionViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DescriptionSegue" {
-            if let descriptionTVC = segue.destination as? DescriptionTVC {
+            let descriptionTVC = segue.destination as? DescriptionTVC
                 if selectedCell != nil {
                 song   = songVM?.songs.value[selectedCell!]
                 }
-                descriptionTVC.song = song
-                
-            }
+                descriptionTVC?.song = song
         }
     }
 }
